@@ -1,0 +1,23 @@
+/* Styling for pocket towne front end  */ 
+
+/* starting colors
+    #F6EA8B yellow
+    #F46419 deep orange
+    #FE9F38  brigh orange
+    #CC280B deep red
+    #A04620 dust brown
+    #BB7235 mountain brown
+
+*/
+
+body{
+font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+.splash{
+    background-image: url('pt-cowboy-sunset.png');
+    background-color: aliceblue;
+    border: 80px solid;
+}
