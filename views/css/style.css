@@ -16,8 +16,74 @@ font-family: 'Courier New', Courier, monospace;
 
 }
 
+/* splash section inc nav */
 .splash{
-    background-image: url('pt-cowboy-sunset.png');
-    background-color: aliceblue;
-    border: 80px solid;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
+
+
+.splash::before{
+    width: 100%;
+    height: 100%;
+    background-image: url('pt-cowboy-sunset.png');
+    background-size: cover;
+    content: "";
+  
+    border: 10px solid;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+
+}
+
+nav{
+    opacity: 1;
+    background-color: transparent;
+    color: black;
+    z-index: 1;
+    margin-left: 5%;
+}
+
+nav ul {
+    margin-top: 10%;
+   
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    filter: none;
+
+
+}
+
+nav ul li{
+    padding: 3%;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.splash-logo-wrapper{
+    opacity: 1;
+    z-index: 1;
+    margin-left: 35%;
+   
+    
+}
+
+.splash-blurb{
+    width: 60%;
+    font-weight: 800;
+    opacity: 1;
+    z-index: 1;
+    margin-bottom: 10%;
+    margin-left: 15%;
+}
+
