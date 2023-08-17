@@ -4,6 +4,7 @@
     #F6EA8B yellow
     #F46419 deep orange
     #FE9F38  brigh orange
+    #F16119 bright sun orange
     #CC280B deep red
     #A04620 dust brown
     #BB7235 mountain brown
@@ -38,7 +39,7 @@ flex-wrap: nowrap;
     background-size: cover;
     content: "";
   
-    border: 10px solid;
+    
     opacity: 0.8;
 
 }
@@ -87,27 +88,44 @@ nav ul li{
 }
 
 /* overlay css */
-
 .overlay{
-
-    height: 100%;
     width: 100%;
-   
-    background-image: url('pt-cowboy-cave.png');
-    filter: sepia(40%);
+    height: 100%;
+
     display: flex;
     align-items: center;
     flex-direction: column;     
-    min-height: 600px;/* parrallax */
+    
+    
+     
+    position: relative;    
+
+}
+
+.overlay::before{
+    content: "";
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;     
+    min-height: 600px;/* parrallax */
+    background-image: url('pt-cowboy-cave.png');
+    
+    filter: sepia(40%);
+    
     }  
-    
-    
-.faq{
 
+.overlay-inside{
+    position: relative;
+
+}    
+    
+/* faq css */ 
+
+.faq{
     
     width: 75%;
     height: 600px;
@@ -117,19 +135,90 @@ nav ul li{
     justify-content: center;
     align-items: center;
     color: white;
+    filter: none;
     z-index: 1;
 }
 
 .faq .content-box {
-    width: 75%;
+    width: 85%;
     height: 600px;
     overflow: hidden;
     padding: 20px;
-    background-color: #dda42abe;
+    background: url(https://pockettowne.io/img/Paper_texture_v5_by_bashcorpo.jpg);
     
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
-    -webkit-clip-path: polygon(0% 0%, 5% 2%, 10% 0%, 15% 5%, 20% 0%, 25% 2%, 30% 0%, 35% 2%, 40% 0%, 45% 2%, 50% 0%, 55% 2%, 60% 0%, 65% 2%, 70% 0%, 75% 2%, 80% 0%, 85% 2%, 90% 0%, 95% 2%, 100% 5%, 98% 5%, 100% 10%, 98% 15%, 100% 20%, 98% 25%, 100% 30%, 89% 35%, 95% 42%, 98% 45%, 100% 50%, 98% 55%, 97% 62%, 98% 65%, 100% 70%, 98% 75%, 95% 80%, 98% 85%, 100% 90%, 98% 95%, 100% 100%, 95% 98%, 90% 100%, 85% 98%, 80% 100%, 75% 98%, 70% 100%, 65% 98%, 60% 100%, 55% 98%, 50% 100%, 45% 98%, 40% 100%, 35% 98%, 30% 100%, 25% 98%, 20% 100%, 15% 98%, 10% 100%, 5% 98%, 0% 100%, 2% 95%, 0% 90%, 2% 85%, 0% 80%, 2% 75%, 0% 70%, 2% 65%, 0% 60%, 2% 55%, 15% 50%, 2% 45%, 0% 40%, 2% 35%, 0% 30%, 2% 30%, 10% 20%, 2% 15%, 0% 10%, 2% 5%);
+    -webkit-clip-path: polygon(0% 0%, 5% 2%, 10% 0%, 15% 5%, 20% 0%, 25% 2%, 30% 0%, 35% 2%, 40% 4%, 45% 2%, 50% 0%, 55% 2%, 60% 0%, 65% 2%, 70% 0%, 75% 2%, 80% 0%, 85% 2%, 90% 0%, 95% 2%, 100% 5%, 98% 5%, 100% 10%, 98% 15%, 100% 20%, 98% 25%, 100% 30%, 89% 35%, 95% 42%, 98% 45%, 100% 50%, 98% 55%, 97% 62%, 98% 65%, 100% 70%, 98% 75%, 95% 80%, 98% 85%, 100% 90%, 98% 95%, 100% 100%, 95% 98%, 90% 100%, 85% 98%, 80% 100%, 75% 105%, 70% 100%, 65% 98%, 60% 100%, 55% 98%, 50% 100%, 45% 98%, 40% 91%, 35% 98%, 30% 100%, 25% 98%, 20% 100%, 15% 98%, 10% 100%, 5% 98%, 0% 100%, 2% 95%, 0% 90%, 2% 85%, 0% 80%, 2% 75%, 0% 70%, 2% 65%, 0% 60%, 2% 55%, 15% 50%, 2% 45%, 0% 40%, 2% 35%, 0% 30%, 2% 30%, 10% 20%, 2% 15%, 0% 10%, 2% 5%);
   }
+
+.content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-box h1{
+     color: #42455a;
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+.faq-list-wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column; 
+    filter: none;
+    position: relative;
+   
+}
+
+
+
+.faq-list li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 2%;
+    background: linear-gradient(222deg, rgba(252,176,69,0) 0%, rgba(219,110,40,1) 53%);
+    filter: none;
+    border-radius: 5px;
+    opacity: 1;
+    z-index: 1; 
+}
+
+.faq-list li label{
+    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #050005;
+  cursor: pointer;
+}
+
+.faq-list li label span{
+    color: #050005;
+}
+
+.faq-list label + input[type="radio"]{
+    display: none;
+}
+
+.faq-list .faq-list-content {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    color: #050005;
+    font-weight: 700;
+  }
+
+  .faq-list label + input[type="radio"]:checked + .faq-list-content{
+    max-height: 200px;
+}
+
+
 
 .road-map{
 
