@@ -144,7 +144,14 @@ nav ul li{
     height: 600px;
     overflow: hidden;
     padding: 20px;
-    background: url(https://pockettowne.io/img/Paper_texture_v5_by_bashcorpo.jpg);
+    background: linear-gradient(
+        to bottom right,  
+       #fff9c6, #edb677, #f6c181, #3e2215, 
+        #623720, #050005
+       );
+    background-repeat: no-repeat;
+    background-size: 1000% 1000%;
+    animation: gradient 60s ease infinite;
     
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
     -webkit-clip-path: polygon(0% 0%, 5% 2%, 10% 0%, 15% 5%, 20% 0%, 25% 2%, 30% 0%, 35% 2%, 40% 4%, 45% 2%, 50% 0%, 55% 2%, 60% 0%, 65% 2%, 70% 0%, 75% 2%, 80% 0%, 85% 2%, 90% 0%, 95% 2%, 100% 5%, 98% 5%, 100% 10%, 98% 15%, 100% 20%, 98% 25%, 100% 30%, 89% 35%, 95% 42%, 98% 45%, 100% 50%, 98% 55%, 97% 62%, 98% 65%, 100% 70%, 98% 75%, 95% 80%, 98% 85%, 100% 90%, 98% 95%, 100% 100%, 95% 98%, 90% 100%, 85% 98%, 80% 100%, 75% 105%, 70% 100%, 65% 98%, 60% 100%, 55% 98%, 50% 100%, 45% 98%, 40% 91%, 35% 98%, 30% 100%, 25% 98%, 20% 100%, 15% 98%, 10% 100%, 5% 98%, 0% 100%, 2% 95%, 0% 90%, 2% 85%, 0% 80%, 2% 75%, 0% 70%, 2% 65%, 0% 60%, 2% 55%, 15% 50%, 2% 45%, 0% 40%, 2% 35%, 0% 30%, 2% 30%, 10% 20%, 2% 15%, 0% 10%, 2% 5%);
@@ -179,7 +186,10 @@ nav ul li{
     width: 100%;
     margin-bottom: 1%;
     padding: 2%;
-    background: linear-gradient(222deg, rgba(252,176,69,0) 0%, rgba(219,110,40,1) 53%);
+    background: linear-gradient(222deg, rgba(252,176,69,0) 0%, #a73713 53%);
+    box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
+    -webkit-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
+    -moz-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);;
     filter: none;
     border-radius: 5px;
     opacity: 1;
@@ -218,17 +228,32 @@ nav ul li{
     max-height: 200px;
 }
 
+/* roadmap css */
 
+@keyframes gradient { 
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+  }
 
 .road-map{
-
-    height: 800px;
+    width: 100%;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     color: white;
     z-index: 1;
+    background: linear-gradient(
+    to bottom right,  
+   #fff9c6, #edb677, #f6c181, #3e2215, 
+    #623720
+   );
+    background-repeat: no-repeat;
+    background-size: 1000% 1000%;
+    animation: gradient 60s ease infinite;
+    clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%);
 
 }
 
