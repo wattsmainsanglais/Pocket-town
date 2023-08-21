@@ -277,10 +277,10 @@ nav ul li{
 
 .scroller-container{
 
-    width: 75%;
+    width: 80%;
     display: flex; 
     overflow-x: scroll;
-    margin: 0 5%;
+    margin: 0 3%;
     padding: 5% 0;
     
     
@@ -297,11 +297,12 @@ nav ul li{
     
     width: 100%;
     justify-content: center;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
-    grid-column-gap: 3% ;
-    margin: 0 6% 0 3%;
+    grid-column-gap: 1% ;
+    
     
     padding: 3% 0%;
     
@@ -315,11 +316,13 @@ nav ul li{
 
 
   .scroll-item{
+    width: 90%;
     transition: .5s;
     align-items: center;
     justify-content: center;
     margin: 0 2%;
     background-color: #7b8fae;
+    padding: 3%;
   }
 
   .scroll-item:hover{
@@ -334,6 +337,7 @@ nav ul li{
     width: 100%;
     filter: grayscale(100%);
     transition: 0.5s;
+    
     
 }
 
