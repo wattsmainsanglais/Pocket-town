@@ -99,7 +99,7 @@ nav ul li{
 
 .contact-icon-wrapper{
     grid-column: 3 / 4;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: flex-end   ;
     display: flex;
@@ -112,8 +112,15 @@ nav ul li{
 
 .contact-icon-wrapper img{
     margin: 3% 0;
-    padding-right: 5%;
+    padding-right: 8%;
 }
+
+.contact-icon-wrapper img:hover{
+    
+    animation: icondance .4s linear;
+    animation-iteration-count: 1;
+    cursor: pointer;
+  }
 
 .splash-blurb{
     width: 60%;
@@ -123,6 +130,28 @@ nav ul li{
     margin-bottom: 10%;
     margin-left: 15%;
 }
+
+@keyframes icondance {
+
+    0%{
+        transform: rotate(-20deg);
+    }
+  
+    50%{
+        transform: rotate(20deg);
+    }
+  
+    75%{
+        transform: rotate(-20deg);
+    }
+  
+    100%{
+        transform: rotate(0deg);
+    }
+    
+  }
+  
+ 
 
 /* overlay css */
 .overlay{
