@@ -79,11 +79,40 @@ nav ul li{
 }
 
 .splash-logo-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 33% 1fr;
+    grid-gap: 5%;
+    grid-template-rows: auto;
     opacity: 1;
     z-index: 1;
-    margin-left: 35%;
+    justify-content: center;
+    align-items: center;
+    
    
     
+}
+
+.splash-logo-wrapper-img-wrapper{
+    grid-column: 2 / 3;
+}
+
+.contact-icon-wrapper{
+    grid-column: 3 / 4;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end   ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    
+
+}
+
+.contact-icon-wrapper img{
+    margin: 3% 0;
+    padding-right: 5%;
 }
 
 .splash-blurb{
@@ -194,10 +223,10 @@ nav ul li{
 
 .faq-list li{
     list-style: none;
-    width: 100%;
+    width: 100%; 
     margin-bottom: 1%;
     padding: 2%;
-    background: linear-gradient(222deg, rgba(252,176,69,0) 0%, #7b8fae 53%);
+    background: linear-gradient(222deg, #7b8fae 0%, #f4631a 53%);
     box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
     -webkit-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
     -moz-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);;
@@ -321,7 +350,7 @@ nav ul li{
     align-items: center;
     justify-content: center;
     margin: 0 2%;
-    background-color: #7b8fae;
+    background-color: #f4631a;
     padding: 3%;
   }
 
