@@ -31,6 +31,7 @@ flex-wrap: nowrap;
 
 /* splash section inc nav */
 .splash{
+    padding-top: 15%;
     height: 100%;
     width: 100%;
     background-image: url('pt-cowboy-sunset.png');
@@ -52,31 +53,55 @@ flex-wrap: nowrap;
 
 }
 
-nav{
+.navbar{
+    width: 60%;
+    margin-top: 10%;
+    margin-left: 5%;
     opacity: 1;
     background-color: transparent;
     color: black;
-    z-index: 1;
-    margin-left: 5%;
+    z-index: 2;
+    
+    position: fixed;
+    top: 0;
+    transition: background-color 1s linear, width 1s linear, margin-left 1s linear;
+    
+    
 }
 
-nav ul {
-    margin-top: 10%;
-   
+.navbar.sticking{
+    width: 100%;
+    opacity: .8;
+    
+    color: black;
+    z-index: 2;
+    margin: 0;
+    
+    top: 0;
+    background-color: #f4631a;
+}
+
+
+.navbar ul {
+    
     list-style: none;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: none;
     filter: none;
 
 
 }
 
-nav ul li{
-    padding: 3%;
+.navbar ul li{
+    padding: 1% 2%;
     font-size: 1.2em;
     font-weight: 700;
 }
+
+
+
 
 .splash-logo-wrapper{
     width: 100%;

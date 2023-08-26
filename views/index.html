@@ -30,9 +30,11 @@
 </head>
 <body>
 
+     
+
     <section class="splash">
             
-    <nav>
+   <nav class="navbar">
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -194,6 +196,21 @@
                     scrollcontainer.style.scrollBehavior = 'auto';
                 })
 
+            // sticky nav js
+                
+            const primaryHeader = document.querySelector('.navbar')
+            const scrollWatcher = document.createElement('div');
+
+            scrollWatcher.setAttribute('data-scroll-watcher', '')
+            primaryHeader.before(scrollWatcher);
+
+            const navObserver = new IntersectionObserver( (entries)=> {
+                console.log(entries)
+                primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
+            }, {rootMargin: "63% 0% 0% 0%"});
+
+            navObserver.observe(scrollWatcher);
+                
                 
 
             </script>
