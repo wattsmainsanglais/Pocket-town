@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: 'Hard Western';
+    src: URL('./fonts/Hard\ Western.ttf') format('truetype');
+  }
+
+body{
+font-family: 'Hard Western', 'Courier New', Courier, monospace;
+letter-spacing: .15rem;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+
+
+}
+
+.navbar{
+    width: 100%;
+   
+    opacity: 1;
+    background-color: #f4361a;
+    color: black;
+    z-index: 2;
+    position: sticky;
+    
+    transition: background-color 1s linear, width 1s linear, margin-left 1s linear;
+    
+    
+}
+
+
+
+.navbar ul {
+    
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: none;
+    filter: none;
+
+
+}
+
+.navbar ul li{
+    padding: 1% 2%;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;     
+    
+    
+     
+    position: relative;    
+
+}
+
+.overlay::before{
+    content: "";
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;/* parrallax */
+    background-image: url('pt-cowboy-cave.png');
+    
+    filter: sepia(40%);
+    
+    }  
+
+.overlay-inside{
+    position: relative;
+
+}    
+
+.brawl-alt-header{
+    width: 100%;
+}
+
+.brawl-alt-header img{
+    width: 100%;
+    object-fit: fill;
+}

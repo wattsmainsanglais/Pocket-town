@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
     res.render('../views/index');
 });
 
+app.get('/brawl', (req, res) => {
+    res.render('../views/brawl')
+});
+
 
 
 
