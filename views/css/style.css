@@ -431,3 +431,15 @@ flex-wrap: nowrap;
 }
 
 
+
+@media only screen and (min-width: 1380px) and (max-width: 2000px) {
+
+.splash-logo-wrapper-img-wrapper img{
+    width: 600px;
+}
+
+.contact-icon-wrapper a img {
+    width: 120px;
+}
+
+}
