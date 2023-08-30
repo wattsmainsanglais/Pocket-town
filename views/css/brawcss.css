@@ -73,23 +73,85 @@ flex-wrap: nowrap;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 600px;/* parrallax */
-    background-image: url('pt-cowboy-cave.png');
+    background-image: url('../images/pt-cowboy-sunset.png');
     
-    filter: sepia(40%);
+    filter:grayscale(80%);
     
     }  
 
 .overlay-inside{
     position: relative;
+    display: flex;
+    justify-content: center;
+    
 
-}    
+}  
 
-.brawl-alt-header{
+
+.brawl-splash{
+    margin-top: 2%;
     width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 11%);
+    grid-template-rows: repeat(7, 13%);
+    justify-content: center;
+    
 }
 
-.brawl-alt-header img{
-    width: 100%;
-    object-fit: fill;
+.brawl-splash-logo-container{
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
+    text-align: center;
+
 }
+
+.brawl-logo{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#adania{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#charlz{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+#lurkers{
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+}
+
+#king-charles{
+    grid-column: 8 / 9;
+    grid-row: 2 / 3;
+}
+
+#degenduck{
+    grid-column: 8 / 9;
+    grid-row: 4 / 5;
+}
+
+#xrace{
+    grid-column: 7 / 8;
+    grid-row: 6 / 7;
+}
+
+
+.brawl-splash-logo-container h1{
+    color: gold;
+    font-size: 3em;
+}
+
+.brawl-splash img{
+    width: 100%
+}
+
