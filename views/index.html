@@ -188,33 +188,6 @@
 
             </div>
 
-            <script>
-                let scrollcontainer = document.querySelector(".scroller-container");
-
-                scrollcontainer.addEventListener('wheel', (e) => {
-                    e.preventDefault();
-                    scrollcontainer.scrollLeft += e.deltaY
-                    scrollcontainer.style.scrollBehavior = 'auto';
-                })
-
-            // sticky nav js
-                
-            const primaryHeader = document.querySelector('.navbar')
-            const scrollWatcher = document.createElement('div');
-
-            scrollWatcher.setAttribute('data-scroll-watcher', '')
-            primaryHeader.before(scrollWatcher);
-
-            const navObserver = new IntersectionObserver( (entries)=> {
-                console.log(entries)
-                primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
-            }, {rootMargin: "63% 0% 0% 0%"});
-
-            navObserver.observe(scrollWatcher);
-                
-                
-
-            </script>
             
         
 
@@ -224,7 +197,7 @@
         <section class="team">
 
             <div class="team-inside-wrapper-first">
-                <article class="team-div tolis">
+                <article id="team-div" class="team-div tolis">
                     <h1>Community Manager</h1>
                     <h2>Apostolis Lymperis</h2>
                     <h2> aka Badassery</h2>
@@ -254,6 +227,10 @@
                     </aside>
 
                 </article>
+            </div>
+
+            <div id="modal">
+                <p id="modal-content"></p>
             </div>
 
             <div class="team-inside-wrapper-two">
@@ -303,6 +280,46 @@
     </div>
     </section>
 </body>
+
+
+<script>
+    let scrollcontainer = document.querySelector(".scroller-container");
+
+    scrollcontainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollcontainer.scrollLeft += e.deltaY
+        scrollcontainer.style.scrollBehavior = 'auto';
+    })
+
+// sticky nav js
+    
+const primaryHeader = document.querySelector('.navbar')
+const scrollWatcher = document.createElement('div');
+
+scrollWatcher.setAttribute('data-scroll-watcher', '')
+primaryHeader.before(scrollWatcher);
+
+const navObserver = new IntersectionObserver( (entries)=> {
+    console.log(entries)
+    primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
+}, {rootMargin: "63% 0% 0% 0%"});
+
+navObserver.observe(scrollWatcher);
+    
+const teamDiv = document.getElementById('team-div')
+const modal = document.getElementById('modal')
+const modalContent = document.getElementById('modal-content')
+
+teamDiv.addEventListener('mouseover', ()=>{
+    modal.style.display = 'flex'
+    modalContent.innerHTML = 'Our wonderful Town Crier was inspired, like many of us, by the vision of Charles Hoskinson and the Cardano blockchain. He sought out a way to get involved and help with Pocket Towne from the very start, seeing the potential of what we are building. With a 5-year career in engineering under his belt, Tolis contributes his attention to detail as our Discord Administrator. Tolis is a lifelong gamer as well as a crypto and investing enthusiast, and his role in Pocket Towne is the perfect fit to those interests while giving the chance to flex his interpersonal skills. '
+})
+
+modal.addEventListener('mouseout', ()=>{
+    modal.style.display = 'none'
+})
+
+</script>
 
 
 </html>
