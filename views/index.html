@@ -199,8 +199,8 @@
             <div class="team-inside-wrapper-first">
                 <article id="team-div" class="team-div tolis">
                     <h1>Community Manager</h1>
-                    <h2>Apostolis Lymperis</h2>
-                    <h2> aka Badassery</h2>
+                    <h2>Apostolis Lymperis
+                     aka Badassery</h2>
 
                     <aside>
                         <img src="./images/TolisDoll.png">
@@ -229,44 +229,44 @@
                 </article>
             </div>
 
-            <div id="modal">
+            <div id="modal" class="modal">
                 <p id="modal-content"></p>
             </div>
 
             <div class="team-inside-wrapper-two">
                 <article class="team-div frac">
-                    <h1>Co-Founder, Artist</h1>
-                    <h2>Fractallily</h2>
+                    <h1>Partner, Co-Founder, Developer</h1>
+                    <h2>Justin Ciriello aka Applerust</h2>
 
                     <aside>
-                        <img src="./images/NinaDoll.png">
+                        <img src="./images/JustinDoll.png">
                     </aside>
 
                 </article>
 
                 <article class="team-div kardall">
-                    <h1>Co-Founder, Devops</h1>
-                    <h2>Jeremy Walker aka Kardall</h2>
+                    <h1>Partner, Co-Founder, Developer</h1>
+                    <h2>Luke Ranly aka Mayor Hoppadoondong</h2>
 
                     <aside>
-                        <img src="./images/JeremyDoll.png">
+                        <img src="./images/LukeDoll.png">
                     </aside>
 
                 </article>
 
                 <article class="team-div frac">
-                    <h1>Co-Founder, Artist</h1>
-                    <h2>Fractallily</h2>
+                    <h1>3D Modeler</h1>
+                    <h2>Mohamed Hesham aka H</h2>
 
                     <aside>
-                        <img src="./images/NinaDoll.png">
+                        <img src="./images/MohamedDoll.png">
                     </aside>
 
                 </article>
 
                 <article class="team-div frac">
-                    <h1>Co-Founder, Artist</h1>
-                    <h2>Fractallily</h2>
+                    <h1>Front-End</h1>
+                    <h2>NatureDopes</h2>
 
                     <aside>
                         <img src="./images/NinaDoll.png">
@@ -305,19 +305,31 @@ const navObserver = new IntersectionObserver( (entries)=> {
 }, {rootMargin: "63% 0% 0% 0%"});
 
 navObserver.observe(scrollWatcher);
+
+/* Team section*/
     
-const teamDiv = document.getElementById('team-div')
+const teamDiv = document.querySelectorAll('.team-div')
+console.log(teamDiv);
 const modal = document.getElementById('modal')
 const modalContent = document.getElementById('modal-content')
 
-teamDiv.addEventListener('mouseover', ()=>{
-    modal.style.display = 'flex'
-    modalContent.innerHTML = 'Our wonderful Town Crier was inspired, like many of us, by the vision of Charles Hoskinson and the Cardano blockchain. He sought out a way to get involved and help with Pocket Towne from the very start, seeing the potential of what we are building. With a 5-year career in engineering under his belt, Tolis contributes his attention to detail as our Discord Administrator. Tolis is a lifelong gamer as well as a crypto and investing enthusiast, and his role in Pocket Towne is the perfect fit to those interests while giving the chance to flex his interpersonal skills. '
+const teamInfoArray = ['Our wonderful Town Crier was inspired, like many of us, by the vision of Charles Hoskinson and the Cardano blockchain. He sought out a way to get involved and help with Pocket Towne from the very start, seeing the potential of what we are building. With a 5-year career in engineering under his belt, Tolis contributes his attention to detail as our Discord Administrator. Tolis is a lifelong gamer as well as a crypto and investing enthusiast, and his role in Pocket Towne is the perfect fit to those interests while giving the chance to flex his interpersonal skills. ',
+ 'Fractallily grew up eating mac n cheese from the box and has either drawn by hand or created various forms of textile art since childhood. Somehow that cheesy pasta remained her favorite food even while she built a successful career in manufacturing. Even though she still consistently created works of art, it wasnt a primary source of income. When we were creating the concept for our paper doll CNFTs, it became known that Fractallily loved creating paper dolls as a child. This discovery led to the negotiations for her largest-to-date commissioned work of art, the Pocket Towne Genesis Paper Dolls.']
+
+for(let i = 0; i < teamDiv.length ; i++){
+    teamDiv[i].addEventListener('click', ()=>{
+    modal.classList.add('modal-in-view');
+    modalContent.innerHTML = teamInfoArray[i];
+})
+}
+
+
+
+modal.addEventListener('click', ()=>{
+    modal.classList.remove('modal-in-view');
 })
 
-modal.addEventListener('mouseout', ()=>{
-    modal.style.display = 'none'
-})
+
 
 </script>
 

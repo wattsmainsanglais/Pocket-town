@@ -471,27 +471,42 @@ flex-wrap: nowrap;
     backdrop-filter: blur(2px);
     margin: 1% 2%;
     border-radius: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+   
+   
 }
+
 
 .team-div > aside{
     display: flex;
     justify-content: center;
 }
 
+.team-div h2{
+    padding-bottom: 3%;
+}
+
 .team-div > aside > img {
-    width: 25%
+    width: 25% ;
+    transition: transform .5s;
+}
+
+.team-div > aside > img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
      /* The Modal (background) */
- #modal {
-    display: none; /* Hidden by default */
+ .modal {
+    display: flex; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
-    left: 10%;
-    top: 10%;
-    width: 80%; /* Full width */
-    height: 80%; /* Full height */
+    left: 50%;
+    top: 50%;
+    width: 0; /* Full width */
+    height: 0; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     backdrop-filter: blur(1px);
     background-color: #f4631a59; /* Black w/ opacity */
@@ -499,7 +514,20 @@ flex-wrap: nowrap;
 
     justify-content: center;
     align-items: center;
+    transition: display 1s;
   }
+
+  .modal-in-view{
+    width: 80%;
+    height: 80%;
+    transition: width 1s ease, height .5s ease, left 1s, top .5s;
+    display: flex;
+    left: 10%;
+    top: 10%;
+  }
+
+
+  
   
   /* Modal Content/Box */
   #modal-content {
