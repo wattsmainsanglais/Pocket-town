@@ -515,6 +515,7 @@ flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     transition: display 1s;
+    overflow: hidden;
   }
 
   .modal-in-view{
@@ -524,13 +525,14 @@ flex-wrap: nowrap;
     display: flex;
     left: 10%;
     top: 10%;
+    overflow: hidden;
   }
 
 
   
   
   /* Modal Content/Box */
-  #modal-content {
+  .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,11 +540,25 @@ flex-wrap: nowrap;
     background-color: #fefefe;
     margin-top: 3%;
     padding: 4%;
-   
+    color: #fefefe;
+    overflow: hidden;
+    
+     
          /* from the top and centered */
     border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 0; /* Could be more or less, depending on screen size */
   }
+
+  .modal-content-in-view{
+    width: 60%;
+    color: black;
+    transition: color 4s, width 1s ease;
+    overflow-x: hidden;
+    
+  }
+
+
+  
   
   /* The Close Button */
   .close {
