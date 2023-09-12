@@ -35,6 +35,7 @@ flex-wrap: nowrap;
     
     width: 100%;
     background-image: url('pt-cowboy-sunset.png');
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 98%, 0% 99%);
     background-size: cover;
     display: flex;
     align-items: flex-start;
@@ -202,6 +203,7 @@ flex-wrap: nowrap;
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 0%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

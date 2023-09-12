@@ -83,7 +83,9 @@ flex-wrap: nowrap;
 
 .overlay-inside{
     position: relative;
+    flex-direction: column;
     display: flex;
+    align-items: center;
     justify-content: center;
     
 
@@ -155,3 +157,146 @@ flex-wrap: nowrap;
     width: 100%
 }
 
+.brawl-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em ;
+    width: 80%;
+    padding-bottom: 5%;
+
+}
+
+.brawl-content > article{
+    color: rgb(255, 250, 240);
+   
+   
+
+
+    position: relative;    
+}
+
+.brawl-content > article::before{
+    content: "";
+
+    
+   
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border: 3px solid #887a6e;
+    box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -webkit-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -moz-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    background-image: url('../images/cactus-frontier.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;/* parrallax */
+}
+
+
+.brawl-content-text-div{
+    position: relative;
+    margin: 3% 3% 0 3%;
+    padding: 0 2%;
+    background-color:#7763459f;
+    border-radius: 1em;
+    border: 2px solid #bf9f70;
+
+}
+
+.brawl-content-text-div:last-of-type{
+    margin-bottom: 3%;
+}
+
+.brawl-content h2{
+    font-size: 1.3em;
+}
+
+.brawl-content article p, .brawl-content article h2, .brawl-content article ul{
+    padding: 3%;
+}
+
+/* assets page css */
+
+
+.overlay-assets{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;     
+    
+    
+     
+    position: relative; 
+    
+    padding-bottom: 10%;
+
+}
+
+.overlay-assets::before{
+    content: "";
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1000px;/* parrallax */
+    background-image: url('../images/train.png');
+    
+    filter:grayscale(25%);
+    
+    }  
+
+    .overlay-inside-assets{
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    
+    }  
+
+    .asset-content{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2em ;
+        width: 80%;
+        padding-bottom: 5%;
+    
+    }
+
+  .asset-land-rush-header, .asset-ptc-header{
+    padding: 3%;
+    color: aliceblue;
+    margin-top: 14%;
+    position: relative;
+    font-size: 3em;
+    backdrop-filter: blur(2px);
+
+  }  
+
+  .asset-ptc-header{
+
+    margin-top: 10%;
+  }
+
+  .ptc-till-wrapper aside img{
+    width: 50%;
+  }
+
+    

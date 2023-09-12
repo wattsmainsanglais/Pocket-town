@@ -23,7 +23,9 @@ app.get('/brawl', (req, res) => {
     res.render('../views/brawl')
 });
 
-
+app.get('/assets', (req, res) => {
+    res.render('../views/assets')
+});
 
 
 
