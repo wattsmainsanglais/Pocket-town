@@ -97,10 +97,24 @@ flex-wrap: nowrap;
 }
 
 .navbar > ul li, .navbar > ul a {
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
     padding: 1% 2%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700;
+    transition: text-shadow .5s, color .5s;
 }
+
+.navbar ul li:hover {
+    cursor: pointer;
+    color: #887a6e;
+    text-shadow: 0 0 5px #f6ea8b,
+                0 0 25px  #f6ea8b,
+                0 0 50px #f6ea8b,
+                0 0 100px #f6ea8b;
+  }
 
 
 
@@ -418,9 +432,9 @@ flex-wrap: nowrap;
 
   .scroll-item:hover{
     transform: scale(1.05);
-    box-shadow: 5px 4px 40px 5px rgba(232,220,220,0.69);
-    -webkit-box-shadow: 5px 4px 40px 5px rgba(232,220,220,0.69);
-    -moz-box-shadow: 5px 4px 40px 5px rgba(232,220,220,0.69);
+    box-shadow: 5px 4px 40px 5px #f6ea8b;
+    -webkit-box-shadow: 5px 4px 40px 5px #f6ea8b;
+    -moz-box-shadow: 5px 4px 40px 5px #f6ea8b;
 
   }
 

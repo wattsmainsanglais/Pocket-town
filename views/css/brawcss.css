@@ -36,7 +36,7 @@ flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: none;
+    flex-wrap: nowrap;
     filter: none;
 
 
@@ -44,9 +44,21 @@ flex-wrap: nowrap;
 
 .navbar ul li, .navbar ul a{
     padding: 1% 2%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700;
+    transition: text-shadow .5s, color .5s;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
 }
+
+.navbar ul li:hover {
+    cursor: pointer;
+    color: #887a6e;
+    text-shadow: 0 0 5px #f6ea8b,
+                0 0 25px  #f6ea8b,
+                0 0 50px #f6ea8b,
+                0 0 100px #f6ea8b;
+  }
 
 
 
@@ -339,6 +351,10 @@ flex-wrap: nowrap;
 	color: var(--clr-primary);
 }
 
+.is-hidden {
+	display: none;
+}
+
 #register {
 	position: absolute;
 	width: 40vw;
@@ -388,3 +404,33 @@ flex-wrap: nowrap;
     }
   
     
+
+    /* PAPER DOLLS CSS */
+
+    .paper-dolls{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paper-dolls h1{
+        font-size: 2.5em ;
+    }
+
+    .roadmap--phase {
+        min-width: 15%;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .amount-select {
+        font-size: 1rem;
+        text-align: center;
+        padding-left: 0.5em;
+    }
+
+    .wallet-input {
+        display: inline-flex;
+        vertical-align: middle;
+    }

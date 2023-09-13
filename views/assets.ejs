@@ -36,13 +36,13 @@
    <nav class="navbar">
     <ul>
         <a href="/"><li>Home</li></a>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Roadmap</li>
-        <li>Info</li>
-        <li>Genesis Dolls</li>
+        <a><li>About</li></a>
+        <a><li>FAQ</li></a>
+        <a><li>Roadmap</li></a>
+        <a><li>Team</li></a>
+        <a><li>Pocket-Paper</li></a>
         <a href="assets"><li>Buy</li></a>
-        <a href="brawl"><li>Brawl Bot</li></a>
+        <a href="brawl"><li>Brawl</li></a>
         
      </ul>
     </nav>
@@ -130,9 +130,9 @@
                                 </div>
                                 <input class="margin-auto" id="ptcamount" type="number" maxlength="6" width="500px" style="display: none; width: 20vw; font-size: 2rem; text-align: center;" value="7">
             
-                                <div id="adaannouncebox" style="margin-top: 2vh;" class="">
-                                    Send <strong>Exactly</strong> <span id="adatosend">12</span> ADA to <div class="wallet-input"><input id="wallet-address" value="addr1qxhrkzzjkcxr..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden" style="opacity: 1;">Copied</span></div>
-                                    <div>And you will receive <span id="ptcamountreceived">10000</span> Pocket Change and 1.5 ADA</div>
+                                <div id="adaannouncebox" style="margin-top: 2vh;" class="is-hidden">
+                                    Send <strong>Exactly</strong> <span id="adatosend"></span> ADA to <div class="wallet-input"><input id="wallet-address" value="addr1qxhrkzzjkcxr..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden">Copied</span></div>
+                                    <div>And you will receive <span id="ptcamountreceived"></span> Pocket Change and 1.5 ADA</div>
                                     <div>
                                         <p>DO NOT SEND FROM AN EXCHANGE! Your ADA will be lost.</p>
                                         <p>Any Value Less than 7 or above 502 will be considered a donation!</p>
@@ -159,6 +159,84 @@
                                 
                             </div>
                         </article>
+                        
+                    </div>
+                   
+                    
+                </article>
+    
+    
+    
+            </section>
+
+            <section class="asset-land-rush-header">
+                <h1>Paper Dolls</h1>
+            </section>
+
+
+            <section class="asset-content brawl-content">
+                <article>
+                     <div class="brawl-content-text-div paper-dolls">
+                        
+                        <h1> Important</h1>
+
+                        <h2>
+                            Use any Shelly-era wallet (Daedalus/ CCVault/ Yoroi/ Nami).
+                            DO NOT SEND ADA FROM AN EXCHANGE, ADA sent from an exchange will not be accepted or refunded.
+                        </h2>
+                        <img src="./images/BannerRandomPaperDolls.png" style="max-width: 60%;">
+
+                        <div class="roadmap--phase">
+                            <div>Send From Wallet</div>
+                            <select id="amount-select" class="amount-select" onchange="javascript:updatePrice(this);">
+                                <option value="1">1 for 30 ADA</option>
+                                <option value="2">2 for 60 ADA</option>
+                                <option value="3">3 for 90 ADA</option>
+                                <option value="4">4 for 120 ADA</option>
+                                <option value="5">5 for 150 ADA</option>
+                                <option value="6">6 for 180 ADA</option>
+                                <option value="7">7 for 210 ADA</option>
+                                <option value="8">8 for 240 ADA</option>
+                                <option value="9">9 for 270 ADA</option>
+                                <option value="10">10 for 300 ADA</option>
+                            </select>
+                            <p id="send-message">Send Exactly 30 ADA To The Following Address</p>
+                            
+                            <div class="wallet-input"><input id="wallet-address" value="addr1vxzdzksvynn..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden">Copied</span></div>
+                            <div style="font-size: 0.35em; margin-bottom: 0.5em;">Or to purchase with Nami or Eternl directly, <a href="https://buynfts.exchange/sales/pt/" target="_new">click here</a>.</div>
+                            <img src="./images/BannerHandDrawn.png" style="max-width: 60%;">
+                           
+                           <script>
+                                function updatePrice(s) {
+                                    var v = s.options[s.selectedIndex].value * 30;
+                                    document.getElementById("send-message").innerHTML = "Send Exactly "+v+" ADA To The Following Address";
+                                }
+                                document.getElementById("copy-wallet").addEventListener('click', fadeOutEffect);
+                                function fadeOutEffect() {
+                                var fadeTarget = document.getElementById("status");
+                                var fadeEffect = setInterval(function () {
+                                    if (!fadeTarget.style.opacity) {
+                                        fadeTarget.style.opacity = 1;
+                                    }
+                                    if (fadeTarget.style.opacity > 0) {
+                                        fadeTarget.style.opacity -= 0.1;
+                                    } else {
+                                        document.getElementById('status').classList.add("is-hidden");
+                                        fadeTarget.style.opacity = 1;
+                                        clearInterval(fadeEffect);
+                                    }
+                                }, 200);
+                            }
+                                function copyText() {
+                                    navigator.clipboard.writeText("addr1vxzdzksvynngutxpvygl4pkg449sh2vsdpzwtr32xfz5q4crkltfs").then( function() {
+                                        document.getElementById('status').classList.remove("is-hidden");
+                                    });
+                                
+                                }
+                            </script>
+                        </div>
+
+                
                         
                     </div>
                    
