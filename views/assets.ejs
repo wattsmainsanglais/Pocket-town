@@ -115,13 +115,49 @@
                        
                         <h2>Bank of Pocket Town</h2>
 
-                        <h3>How much Ada do you wish to exchange for PTC?</h3>
+                        
+
+                        <div class="pocket-paper-container">
+                            <div class="pocket-paper-blurb">
+                                <div class="margin-auto">How Much ADA Do You Wish To Exchange For PTC?</div>
+                                <div>
+                                    <button id="7ada" class="">7 ADA</button>
+                                    <button id="12ada" class="selected">12 ADA</button>
+                                    <button id="52ada">52 ADA</button>
+                                    <button id="102ada" class="">102 ADA</button>
+                                    <button id="202ada">202 ADA</button>
+                                    <button id="502ada">502 ADA</button>
+                                </div>
+                                <input class="margin-auto" id="ptcamount" type="number" maxlength="6" width="500px" style="display: none; width: 20vw; font-size: 2rem; text-align: center;" value="7">
+            
+                                <div id="adaannouncebox" style="margin-top: 2vh;" class="">
+                                    Send <strong>Exactly</strong> <span id="adatosend">12</span> ADA to <div class="wallet-input"><input id="wallet-address" value="addr1qxhrkzzjkcxr..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden" style="opacity: 1;">Copied</span></div>
+                                    <div>And you will receive <span id="ptcamountreceived">10000</span> Pocket Change and 1.5 ADA</div>
+                                    <div>
+                                        <p>DO NOT SEND FROM AN EXCHANGE! Your ADA will be lost.</p>
+                                        <p>Any Value Less than 7 or above 502 will be considered a donation!</p>
+                                        
+                                    </div>
+                                </div>
+                                
+            
+                            </div>
+                            
+                        </div>
                         
                         <article class="ptc-till-wrapper">
-                            <h3>Pull lever To Complete Sale</h3>
-                            <aside>
-                                <img src="./images/CashRegister_handle_up.png">
-                            </aside>
+                            <div class="cash-container">
+                
+                                <img id="ones" width="90%" src="./images/cash-register/0.png">
+                                <img id="tens" width="90%" src="./images/cash-register/0.png">
+                                <img id="hundreds" width="90%" src="./images/cash-register/0.png">
+                                <img id="thousands" width="90%" src="./images/cash-register/0.png">
+                                <img id="tenthousands" width="90%" src="./images/cash-register/0.png">
+                                <img id="hundredthousands" width="90%" src="./images/cash-register/1.png">
+                                <img id="register" src="./images/cash-register/CashRegister.png" width="90%">
+                                <img id="cashRegisterHandle" onclick="javascript:doHandleDown();" src="./images/cash-register/CashRegister_handle_up.png" width="90%">
+                                
+                            </div>
                         </article>
                         
                     </div>
@@ -140,5 +176,163 @@
 </section>
 
 </body>
+
+<script type="text/javascript">
+
+
+document.getElementById("copy-wallet").addEventListener('click', fadeOutEffect);
+        function fadeOutEffect() {
+            var fadeTarget = document.getElementById("status");
+            var fadeEffect = setInterval(function () {
+                if (!fadeTarget.style.opacity) {
+                    fadeTarget.style.opacity = 1;
+                }
+                if (fadeTarget.style.opacity > 0) {
+                    fadeTarget.style.opacity -= 0.1;
+                } else {
+                    document.getElementById('status').classList.add("is-hidden");
+                    fadeTarget.style.opacity = 1;
+                    clearInterval(fadeEffect);
+                }
+            }, 200);
+        }
+
+
+        var walletaddr = "addr1qxhrkzzjkcxrpwwt37myc4gtvlk2r75fhf38vs77h0z4saj82je5zeaha95nmes6r2a504vq7y7exay9maj7j2wjsfqs9qns22"
+        function copyText() {
+            navigator.clipboard.writeText(walletaddr).then( function() {
+                document.getElementById('status').classList.remove("is-hidden");
+            });
+        }
+        window.addEventListener('load',() => {
+
+            var img = new Image()
+            img.src = ""
+            img.src = "/images/cash-register/CashRegister_handle_up.png"
+            img.src = "/images/cash-register/0.png"
+            img.src = "/images/cash-register/1.png"
+            img.src = "/images/cash-register/2.png"
+            img.src = "/images/cash-register/3.png"
+            img.src = "/images/cash-register/4.png"
+            img.src = "/images/cash-register/5.png"
+            img.src = "/images/cash-register/6.png"
+            img.src = "/images/cash-register/7.png"
+            img.src = "/images/cash-register/8.png"
+            img.src = "/images/cash-register/9.png"
+            img.src = "/images/cash-register/CashRegister.png"
+        })
+        var ptcAmountInput = document.querySelector("#ptcamount")
+
+        function removeHiglightButtons() {
+            document.getElementById("7ada").classList.remove('selected')
+            document.getElementById("12ada").classList.remove('selected')
+            document.getElementById("52ada").classList.remove('selected')
+            document.getElementById("102ada").classList.remove('selected')
+            document.getElementById("202ada").classList.remove('selected')
+            document.getElementById("502ada").classList.remove('selected')
+        }
+
+        function setAdaAmount(v) {
+            document.getElementById("ptcamount").value = v
+        }
+
+        document.getElementById("7ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(7)
+        })
+        document.getElementById("12ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(12)
+        })
+        document.getElementById("52ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(52)
+        })
+        document.getElementById("102ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(102)
+        })
+        document.getElementById("202ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(202)
+        })
+        document.getElementById("502ada").addEventListener('click', (e) => {
+            removeHiglightButtons();
+            e.target.classList.add('selected')
+            setAdaAmount(502)
+        })
+
+        function doHandleDown() {
+            document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_up.png'
+            var audio = new Audio('./cash-register.mp3');
+            audio.play().then(() => {
+                setTimeout(() => {
+                    document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_up.png'
+                }, 200)
+                
+            });
+            var ptc = document.getElementById("ptcamount").value
+            var adaToSendValue = ptc
+
+            ptc = (ptc - 2) / 0.001
+            var valArray = ptc.toString().split('')
+
+            var ones = document.getElementById("ones")
+            var tens = document.getElementById("tens")
+            var hundreds = document.getElementById("hundreds")
+            var thousands = document.getElementById("thousands")
+            var tenthousands = document.getElementById("tenthousands")
+            var hundredthousands = document.getElementById("hundredthousands")
+            // ones.src = "/img/" + valArray[valArray.length-1] + ".png"
+            // RESET ALL IMAGE VALUES TO 0
+            ones.src = "/images/cash-register/0.png"
+            tens.src = "/images/cash-register/0.png"
+            hundreds.src = "/images/cash-register/0.png"
+            thousands.src = "/images/cash-register/0.png"
+            tenthousands.src = "/images/cash-register/0.png"
+            hundredthousands.src = "/images/cash-register/0.png"
+
+            switch (valArray.length) {
+                case 4:
+                    hundredthousands.src = ""
+                    tenthousands.src = ""
+                    thousands.src = "/images/cash-register/" + valArray[valArray.length-4] + ".png"
+                    hundreds.src = "/images/cash-register/" + valArray[valArray.length-3] + ".png"
+                    tens.src = "/images/cash-register/" + valArray[valArray.length-2] + ".png"
+                    ones.src = "/images/cash-register/" + valArray[valArray.length-1] + ".png"
+                    break;
+                case 5:
+                    hundredthousands.src = ""
+                    tenthousands.src = "/images/cash-register/" + valArray[valArray.length-5] + ".png"
+                    thousands.src = "/images/cash-register/" + valArray[valArray.length-4] + ".png"
+                    hundreds.src = "/images/cash-register/" + valArray[valArray.length-3] + ".png"
+                    tens.src = "/images/cash-register/" + valArray[valArray.length-2] + ".png"
+                    ones.src = "/images/cash-register/" + valArray[valArray.length-1] + ".png"
+                    break;
+                case 6: 
+                    hundredthousands.src = "/images/cash-register/" + valArray[valArray.length-6] + ".png"
+                    tenthousands.src = "/images/cash-register/" + valArray[valArray.length-5] + ".png"
+                    thousands.src = "/images/cash-register/" + valArray[valArray.length-4] + ".png"
+                    hundreds.src = "/images/cash-register/" + valArray[valArray.length-3] + ".png"
+                    tens.src = "/images/cash-register/" + valArray[valArray.length-2] + ".png"
+                    ones.src = "/images/cash-register/" + valArray[valArray.length-1] + ".png"
+                    break;
+            }
+
+            document.getElementById("adatosend").innerText = adaToSendValue 
+            document.getElementById("ptcamountreceived").innerText = ptc
+            document.getElementById("adaannouncebox").classList.remove('is-hidden')
+
+        }
+
+        
+    
+
+</script>    
 
 </html>

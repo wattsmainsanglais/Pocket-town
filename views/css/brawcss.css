@@ -18,7 +18,7 @@ flex-wrap: nowrap;
     width: 100%;
    
     opacity: 1;
-    background-color: #f4361a;
+    background-color: #fb6f1e;
     color: black;
     z-index: 2;
     position: sticky;
@@ -42,7 +42,7 @@ flex-wrap: nowrap;
 
 }
 
-.navbar ul li{
+.navbar ul li, .navbar ul a{
     padding: 1% 2%;
     font-size: 1.2em;
     font-weight: 700;
@@ -98,14 +98,14 @@ flex-wrap: nowrap;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(9, 11%);
-    grid-template-rows: repeat(7, 13%);
+    grid-template-rows: repeat(7, 100px);
     justify-content: center;
     
 }
 
 .brawl-splash-logo-container{
     grid-column: 4 / span 3;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
     text-align: center;
 
 }
@@ -119,32 +119,32 @@ flex-wrap: nowrap;
 
 #adania{
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 #charlz{
     grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
 }
 
 #lurkers{
     grid-column: 3 / 4;
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
 }
 
 #king-charles{
     grid-column: 8 / 9;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 #degenduck{
     grid-column: 8 / 9;
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
 }
 
 #xrace{
     grid-column: 7 / 8;
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
 }
 
 
@@ -168,6 +168,7 @@ flex-wrap: nowrap;
 }
 
 .brawl-content > article{
+    width: 100%;
     color: rgb(255, 250, 240);
    
    
@@ -208,7 +209,12 @@ flex-wrap: nowrap;
     background-color:#7763459f;
     border-radius: 1em;
     border: 2px solid #bf9f70;
+    
 
+}
+
+.brawl-content-text-div h2{
+    text-align: center;
 }
 
 .brawl-content-text-div:last-of-type{
@@ -299,4 +305,86 @@ flex-wrap: nowrap;
     width: 50%;
   }
 
+
+  /* cash register css */
+
+  
+
+  .cash-container {
+	position: relative;
+	width: 40vw;
+	margin: 0 auto;
+}
+
+.pocket-paper-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.pocket-paper-blurb {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.wallet-input {
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+#copy-wallet {
+	font-size: 1rem;
+	color: var(--clr-primary);
+}
+
+#register {
+	position: absolute;
+	width: 40vw;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+    #ones, #tens, #hundreds, #thousands, #tenthousands, #hundredthousands {
+        position: absolute;
+        width: 40vw;
+        top: 0;
+        left: 0;
+        z-index: 200;
+    }
+
+    #ones {
+        left: 12.9vw;
+    }
+
+    #tens {
+        left: 10.3vw;
+    }
+
+    #hundreds {
+        left: 7.7vw;
+    }
+
+    #thousands {
+        left: 5.2vw;
+    }
+
+    #tenthousands {
+        left: 2.6vw;
+    }
+
+    #hundredthousands {
+        left: 0.1vw;
+    }
+
+    #cashRegisterHandle {
+        position: relative;
+        width: 40vw;
+        top: 0;
+        left: 0;
+        z-index: 200;
+    }
+  
     
