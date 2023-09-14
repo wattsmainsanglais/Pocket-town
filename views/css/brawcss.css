@@ -17,13 +17,13 @@ flex-wrap: nowrap;
 .navbar{
     width: 100%;
    
-    opacity: 1;
-    background-color: #fb6f1e;
-    color: black;
-    z-index: 2;
-    position: sticky;
+    background: #f6ea8bab;
     
-    transition: background-color 1s linear, width 1s linear, margin-left 1s linear;
+    color: black;
+    border-bottom: 3px solid #887a6e;
+    box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -webkit-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -moz-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
     
     
 }
@@ -32,12 +32,13 @@ flex-wrap: nowrap;
 
 .navbar ul {
     
+    
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    filter: none;
+    
 
 
 }
@@ -83,13 +84,13 @@ flex-wrap: nowrap;
     width: 100%;
     position: absolute;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 600px;/* parrallax */
+    min-height: 800px;/* parrallax */
     background-image: url('../images/pt-cowboy-sunset.png');
     
-    filter:grayscale(80%);
+    filter:grayscale(10%);
     
     }  
 
@@ -161,7 +162,7 @@ flex-wrap: nowrap;
 
 
 .brawl-splash-logo-container h1{
-    color: gold;
+    color: #f6ea8bab;
     font-size: 3em;
 }
 
@@ -173,7 +174,7 @@ flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.2em ;
+    font-size: 1.4em ;
     width: 80%;
     padding-bottom: 5%;
 
@@ -206,10 +207,16 @@ flex-wrap: nowrap;
     width: 100%;
     position: absolute;
     top: 0%;
-    background-image: url('../images/cactus-frontier.png');
+    /*background-image: url('../images/cactus-frontier.png');
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: #f36219a8;
+    background-blend-mode: color-burn;
+    filter: grayscale(100%);
+    
+    
+    
     min-height: 600px;/* parrallax */
 }
 
@@ -273,7 +280,7 @@ flex-wrap: nowrap;
     min-height: 1000px;/* parrallax */
     background-image: url('../images/train.png');
     
-    filter:grayscale(25%);
+    filter:saturate(105%);
     
     }  
 
@@ -292,15 +299,16 @@ flex-wrap: nowrap;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1.2em ;
+        font-size: 1.4em ;
         width: 80%;
         padding-bottom: 5%;
+        color: rgb(255, 250, 240)
     
     }
 
   .asset-land-rush-header, .asset-ptc-header{
     padding: 3%;
-    color: aliceblue;
+    
     margin-top: 14%;
     position: relative;
     font-size: 3em;

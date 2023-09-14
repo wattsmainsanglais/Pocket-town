@@ -80,7 +80,7 @@ flex-wrap: nowrap;
     margin: 0;
     
     top: 0;
-    background-color: #f4631a;
+    background-color: #f6ea8bab;
 }
 
 
@@ -257,11 +257,11 @@ flex-wrap: nowrap;
     height: 600px;
     
     padding: 20px;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to bottom right,  
-       #fff9c6, #edb677, #f6c181, #3e2215, 
-        #623720, #050005
-       );
+       #fff9c6, #edb677, 
+        #623720, #3e2215
+       );*/
     background-repeat: no-repeat;
     background-size: 1000% 1000%;
     animation: gradient 60s ease infinite;
@@ -279,9 +279,11 @@ flex-wrap: nowrap;
 }
 
 .content-box h1{
-     color: #42455a;
-    font-size: 1.4em;
+     color: #ffe5a9;
+     text-shadow: 16px 12px 50px rgba(4,4,4,1);
+    font-size: 2.5em;
     font-weight: 900;
+    margin-bottom: 5%;
 }
 
 .faq-list-wrapper{
@@ -300,7 +302,7 @@ flex-wrap: nowrap;
     width: 100%; 
     margin-bottom: 1%;
     padding: 2%;
-    background: linear-gradient(222deg, #7b8fae 0%, #f4631a 53%);
+    background: linear-gradient(222deg, #7b8fae 0%, #f6ea8b 53%);
     box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
     -webkit-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);
     -moz-box-shadow: 3px 3px 90px 12px rgba(237,182,118,1);;
@@ -367,8 +369,9 @@ flex-wrap: nowrap;
 }
 
 .road-map-header{
-    color: #edb677;
-    font-size: 1.3em;
+    color: #ffe5a9;
+    text-shadow: 0px -1px 21px #887a6e;
+   font-size: 2.5em;
 
 }
 
@@ -426,8 +429,11 @@ flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     margin: 0 2%;
-    background-color: #f4631a;
+    background-color:#7763459f;
+    border-radius: 1em;
+    border: 2px solid #bf9f70;
     padding: 3%;
+    color: rgb(255, 250, 240)
   }
 
   .scroll-item:hover{
@@ -483,7 +489,7 @@ flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f4631a59;
+    background-color: #f6ea8bab;
     backdrop-filter: blur(2px);
     margin: 1% 2%;
     border-radius: 10px;
@@ -521,17 +527,20 @@ flex-wrap: nowrap;
     z-index: 2; /* Sit on top */
     left: 50%;
     top: 50%;
-    width: 0; /* Full width */
-    height: 0; /* Full height */
+    width: 0; 
+    height: 0; 
     overflow: auto; /* Enable scroll if needed */
     backdrop-filter: blur(1px);
-    background-color: #f4631a59; /* Black w/ opacity */
+    background-color: #f6ea8bab; /* Black w/ opacity */
     padding-top: 10px;
 
     justify-content: center;
     align-items: center;
     transition: display 1s;
     overflow: hidden;
+
+   
+
   }
 
   .modal-in-view{
@@ -542,6 +551,14 @@ flex-wrap: nowrap;
     left: 10%;
     top: 10%;
     overflow: hidden;
+
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border: 3px solid #887a6e;
+    box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -webkit-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -moz-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
   }
 
 
@@ -553,23 +570,27 @@ flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #fefefe;
+   
     margin-top: 3%;
     padding: 4%;
-    color: #fefefe;
+    color: #7763459f;
     overflow: hidden;
-    
-     
-         /* from the top and centered */
-    border: 1px solid #888;
     width: 0; /* Could be more or less, depending on screen size */
+    font-size: 1.3em;
+        
+   
+    
   }
 
   .modal-content-in-view{
     width: 60%;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: color 4s, width 1s ease;
     overflow-x: hidden;
+
+    background-color:#7763459f;
+    border-radius: 1em;
+    border: 2px solid #bf9f70;   
     
   }
 
