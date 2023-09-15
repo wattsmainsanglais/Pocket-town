@@ -80,7 +80,7 @@ flex-wrap: nowrap;
     margin: 0;
     
     top: 0;
-    background-color: #f6ea8bab;
+    background-color: #f6ea8bd7;
 }
 
 
@@ -479,13 +479,14 @@ flex-wrap: nowrap;
 .team-inside-wrapper-first{
     display: flex;
     justify-content: space-evenly;
+    width: 90%;
   
 }
 
 .team-inside-wrapper-two{
     display: flex;
-    justify-content: center;
-  
+    justify-content: space-evenly;
+    width: 90%;
 }
 
 .team-div{
@@ -499,6 +500,7 @@ flex-wrap: nowrap;
     border-radius: 10px;
     text-align: center;
     flex-wrap: wrap;
+    width: 20%;
    
    
 }
@@ -516,6 +518,11 @@ flex-wrap: nowrap;
 .team-div > aside > img {
     width: 25% ;
     transition: transform .5s;
+}
+
+.team-div > aside > .chris {
+   
+    width: 59px;
 }
 
 .team-div > aside > img:hover {
