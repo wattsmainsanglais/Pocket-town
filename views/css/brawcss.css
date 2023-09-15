@@ -354,18 +354,50 @@ flex-wrap: nowrap;
 }
 
 .wallet-input {
-	display: inline-flex;
-	vertical-align: middle;
+	display: flex;
+    justify-content: center;
+	vertical-align:bottom;
 }
 
 #copy-wallet {
 	font-size: 1rem;
 	color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+}
+
+#wallet-address{
+    display: flex;
+    align-items: center;
 }
 
 .is-hidden {
 	display: none;
+    text-align: center;
 }
+    
+#adaannouncebox > article{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items:normal;
+
+}
+
+.adaannouncebox-mid-div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.adaannouncebox-last-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
 
 #register {
 	position: absolute;
@@ -413,6 +445,18 @@ flex-wrap: nowrap;
         top: 0;
         left: 0;
         z-index: 200;
+    }
+
+    .ptc-minswap-dex{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ptc-minswap-dex > a{
+        display: flex;
+        align-items: center;
     }
   
     
