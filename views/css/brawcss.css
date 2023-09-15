@@ -17,7 +17,8 @@ flex-wrap: nowrap;
 .navbar{
     width: 100%;
    
-    background: #f6ea8bab;
+    background: #f6ea8bd0;
+    filter: none;
     
     color: black;
     border-bottom: 3px solid #887a6e;
@@ -162,7 +163,8 @@ flex-wrap: nowrap;
 
 
 .brawl-splash-logo-container h1{
-    color: #f6ea8bab;
+    color: #ffe5a9;
+    text-shadow: 0px -1px 21px #887a6e;
     font-size: 3em;
 }
 
@@ -280,7 +282,7 @@ flex-wrap: nowrap;
     min-height: 1000px;/* parrallax */
     background-image: url('../images/train.png');
     
-    filter:saturate(105%);
+    filter:saturate(110%);
     
     }  
 
@@ -313,6 +315,7 @@ flex-wrap: nowrap;
     position: relative;
     font-size: 3em;
     backdrop-filter: blur(2px);
+    text-shadow: 0px -1px 21px #ffe5a9;
 
   }  
 
