@@ -474,10 +474,32 @@ flex-wrap: nowrap;
         font-size: 2.5em ;
     }
 
-    .roadmap--phase {
+    .minting-options{
+        margin-top: 5%;
+        padding-bottom: 3%;
+        margin-bottom: 5%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+    }
+
+    .option-send-ada {
+        grid-column: 1 / 2;
+        grid-row: 1/2;
         min-width: 15%;
-        font-size: 4rem;
+        font-size: 1.5em;
         text-align: center;
+        border-right: 4px solid #bf9f70;
+    }
+
+    .buy-nfts-mint{
+        grid-column: 2 /3;
+        grid-row: 1/2;
+        font-size: 1.5em;
+
+
     }
 
     .amount-select {

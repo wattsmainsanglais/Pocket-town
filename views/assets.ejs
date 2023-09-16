@@ -122,6 +122,7 @@
                         <div class="pocket-paper-container">
                             <div class="pocket-paper-blurb">
                                 <div>PTC is the official in-game currency of our upcoming Pocket Towne game</div>
+                                <br><br>
                                 <div class="margin-auto">How Much ADA Do You Wish To Exchange For PTC?</div>
                                 <div>
                                     <button id="7ada" class="">7 ADA</button>
@@ -168,7 +169,7 @@
                             </div>
                         </article>
 
-                        <div class="ptc-minswap-dex" ><p>PTC is also available on secondary market, liquidity pool on Minswap</p><a href="https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=007394e3117755fbb0558b93c54ce3bc6c85770920044ade143dc742&tokenNameB=505443"><img src="./images/dex,-cardano-logos/minswap.webp" /></a></div>
+                        <div class="ptc-minswap-dex" ><p>PTC is also available on secondary market, liquidity pool on Minswap</p><a href="https://app.minswap.org/swap?currencySymbolA=&tokenNameA=&currencySymbolB=007394e3117755fbb0558b93c54ce3bc6c85770920044ade143dc742&tokenNameB=505443" target="_blank"><img src="./images/dex,-cardano-logos/minswap.webp" /></a></div>
                         
                     </div>
                    
@@ -188,63 +189,85 @@
                 <article>
                      <div class="brawl-content-text-div paper-dolls">
                         
-                        <h1> Important</h1>
+                        
 
                         <h2>
-                            Use any Shelly-era wallet (Daedalus/ CCVault/ Yoroi/ Nami).
-                            DO NOT SEND ADA FROM AN EXCHANGE, ADA sent from an exchange will not be accepted or refunded.
-                        </h2>
-                        <img src="./images/BannerRandomPaperDolls.png" style="max-width: 60%;">
-
-                        <div class="roadmap--phase">
-                            <div>Send From Wallet</div>
-                            <select id="amount-select" class="amount-select" onchange="javascript:updatePrice(this);">
-                                <option value="1">1 for 30 ADA</option>
-                                <option value="2">2 for 60 ADA</option>
-                                <option value="3">3 for 90 ADA</option>
-                                <option value="4">4 for 120 ADA</option>
-                                <option value="5">5 for 150 ADA</option>
-                                <option value="6">6 for 180 ADA</option>
-                                <option value="7">7 for 210 ADA</option>
-                                <option value="8">8 for 240 ADA</option>
-                                <option value="9">9 for 270 ADA</option>
-                                <option value="10">10 for 300 ADA</option>
-                            </select>
-                            <p id="send-message">Send Exactly 30 ADA To The Following Address</p>
+                            Paper Dolls are Pocket Towne NFTs. Each one is unique and can be used as a playable characters in the upcoming Metverse game & 
+                            through our discord server, playable assets in our Towne Brawl mini-game - see the <a href="/brawl">brawl</a> page for further details)
                             
-                            <div class="wallet-input"><input id="wallet-address" value="addr1vxzdzksvynn..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden">Copied</span></div>
-                            <div style="font-size: 0.35em; margin-bottom: 0.5em;">Or to purchase with Nami or Eternl directly, <a href="https://buynfts.exchange/sales/pt/" target="_new">click here</a>.</div>
-                            <img src="./images/BannerHandDrawn.png" style="max-width: 60%;">
-                           
-                           <script>
-                                function updatePrice(s) {
-                                    var v = s.options[s.selectedIndex].value * 30;
-                                    document.getElementById("send-message").innerHTML = "Send Exactly "+v+" ADA To The Following Address";
-                                }
-                                document.getElementById("copy-wallet").addEventListener('click', fadeOutEffect);
-                                function fadeOutEffect() {
-                                var fadeTarget = document.getElementById("status");
-                                var fadeEffect = setInterval(function () {
-                                    if (!fadeTarget.style.opacity) {
-                                        fadeTarget.style.opacity = 1;
-                                    }
-                                    if (fadeTarget.style.opacity > 0) {
-                                        fadeTarget.style.opacity -= 0.1;
-                                    } else {
-                                        document.getElementById('status').classList.add("is-hidden");
-                                        fadeTarget.style.opacity = 1;
-                                        clearInterval(fadeEffect);
-                                    }
-                                }, 200);
-                            }
-                                function copyText() {
-                                    navigator.clipboard.writeText("addr1vxzdzksvynngutxpvygl4pkg449sh2vsdpzwtr32xfz5q4crkltfs").then( function() {
-                                        document.getElementById('status').classList.remove("is-hidden");
-                                    });
+                        </h2>
+
+                        
+                        <img src="./images/BannerRandomPaperDolls.png" style="max-width: 60%;">
+                        <h3>
+                            Dolls can be minted or purchased through the following methods
+                        </h3>
+
+
+                        <div class="minting-options">
+
+                                <div class="option-send-ada">
+                                <div>Send From Wallet</div>
+                                <select id="amount-select" class="amount-select" onchange="javascript:updatePrice(this);">
+                                    <option value="1">1 for 30 ADA</option>
+                                    <option value="2">2 for 60 ADA</option>
+                                    <option value="3">3 for 90 ADA</option>
+                                    <option value="4">4 for 120 ADA</option>
+                                    <option value="5">5 for 150 ADA</option>
+                                    <option value="6">6 for 180 ADA</option>
+                                    <option value="7">7 for 210 ADA</option>
+                                    <option value="8">8 for 240 ADA</option>
+                                    <option value="9">9 for 270 ADA</option>
+                                    <option value="10">10 for 300 ADA</option>
+                                </select>
+                                <p id="send-message">Send Exactly 30 ADA To The Following Address</p>
                                 
+                                <div class="wallet-input"><input id="wallet-address" value="addr1vxzdzksvynn..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet" onclick="javascript:copyText();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden">Copied</span></div>
+                                
+                            
+                            <script>
+                                    function updatePrice(s) {
+                                        var v = s.options[s.selectedIndex].value * 30;
+                                        document.getElementById("send-message").innerHTML = "Send Exactly "+v+" ADA To The Following Address";
+                                    }
+                                    document.getElementById("copy-wallet").addEventListener('click', fadeOutEffect);
+                                    function fadeOutEffect() {
+                                    var fadeTarget = document.getElementById("status");
+                                    var fadeEffect = setInterval(function () {
+                                        if (!fadeTarget.style.opacity) {
+                                            fadeTarget.style.opacity = 1;
+                                        }
+                                        if (fadeTarget.style.opacity > 0) {
+                                            fadeTarget.style.opacity -= 0.1;
+                                        } else {
+                                            document.getElementById('status').classList.add("is-hidden");
+                                            fadeTarget.style.opacity = 1;
+                                            clearInterval(fadeEffect);
+                                        }
+                                    }, 200);
                                 }
-                            </script>
+                                    function copyText() {
+                                        navigator.clipboard.writeText("addr1vxzdzksvynngutxpvygl4pkg449sh2vsdpzwtr32xfz5q4crkltfs").then( function() {
+                                            document.getElementById('status').classList.remove("is-hidden");
+                                        });
+                                    
+                                    }
+                                </script>
+                            </div>
+
+                            <div class="buy-nfts-mint">
+
+                                <div style="font-size: 0.35em; margin-bottom: 0.5em;">Or to purchase with Nami or Eternl directly, <a href="https://buynfts.exchange/sales/pt/" target="_new">click here</a>.</div>
+                               
+
+
+                            </div> 
+                            
+                            
                         </div>
+                        
+                        
+                        <img src="./images/BannerHandDrawn.png" style="max-width: 60%;">
 
                 
                         
