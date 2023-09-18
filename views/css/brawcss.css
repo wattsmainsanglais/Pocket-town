@@ -492,12 +492,17 @@ flex-wrap: nowrap;
         font-size: 1.5em;
         text-align: center;
         border-right: 4px solid #bf9f70;
+        
     }
 
     .buy-nfts-mint{
         grid-column: 2 /3;
         grid-row: 1/2;
         font-size: 1.5em;
+        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
 
     }
