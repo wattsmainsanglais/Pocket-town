@@ -122,7 +122,7 @@ flex-wrap: nowrap;
 .splash-logo-wrapper{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 33% 1fr;
+    grid-template-columns: 25% 33% 25%;
     grid-gap: 5%;
     grid-template-rows: auto;
     opacity: 1;
@@ -139,6 +139,8 @@ flex-wrap: nowrap;
     justify-content: center;
     grid-column: 2 / 3;
 }
+
+
 
 .contact-icon-wrapper{
     grid-column: 3 / 4;
@@ -166,12 +168,59 @@ flex-wrap: nowrap;
   }
 
 .splash-blurb{
-    width: 60%;
+    position: relative;
+    top: 80px;
+    width: 65%;
     font-weight: 800;
     opacity: 1;
     z-index: 1;
+    font-size: 1.2em;
+    text-align: center;
+    color: whitesmoke;
+    backdrop-filter: blur(3px);
+    padding: 2px;
+   
     margin-bottom: 10%;
     margin-left: 15%;
+    text-shadow: 0 0 1px #f6ea8b;
+    
+}
+
+.splash-blurb > h2, .splash-blurb > h3 {
+    animation:  glowing 15s ease-in-out infinite 2s;
+}
+
+@keyframes glowing {
+
+    0%{
+        text-shadow: 0 0 1px #f6ea8b
+    }
+  
+    25%{
+        text-shadow: 0 0 2px #f6ea8b;
+    }
+
+    40%{
+        text-shadow: 0 0 8px #f6ea8b;
+    }
+    41%{
+        text-shadow: 0 0 2px #f6ea8b;
+    }
+  
+    50%{
+        text-shadow: 0 0 3px #f6ea8b;
+    }
+
+    75%{
+        text-shadow: 0 0 2px #f6ea8b;
+    }
+
+    100%{
+        text-shadow: 0 0 1px #f6ea8b;
+    }
+  
+   
+    
 }
 
 @keyframes icondance {

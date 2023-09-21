@@ -17,7 +17,7 @@ flex-wrap: nowrap;
 .navbar{
     width: 100%;
    
-    background: #f6ea8bd0;
+    backdrop-filter: blur(10px);
     filter: none;
     
     color: black;
@@ -213,7 +213,7 @@ flex-wrap: nowrap;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;*/
-    background-color: #f36219a8;
+    background-color: #f3621998;
     background-blend-mode: color-burn;
     filter: grayscale(100%);
     
@@ -318,7 +318,155 @@ flex-wrap: nowrap;
     backdrop-filter: blur(2px);
     text-shadow: 0px -1px 21px #ffe5a9;
 
-  }  
+  } 
+   /* Land rush css */
+
+  #welcomevideo {
+	border: 3px solid var(--clr-links-hover);
+	border-radius: 1em;
+}
+ 
+.videoIntro{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.land-info-wrapper{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+
+.land-info-article{
+    width: 45%;
+    background-color: #bd6e4a98;
+    background-blend-mode: color-burn;
+
+    border-radius: 1em;
+    border: 2px solid #bf9f70;
+    font-size: .9em;
+    padding: 2%;
+    
+
+}
+
+.land-info-aside > h3, .land-info-article > h3 {
+    text-decoration: underline;
+}
+
+.land-info-article > h3{
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.land-legend{
+    margin: 4% 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.legend--marker {
+    position: relative;
+    z-index: 3;
+    filter: none;
+	width: 10px;
+	height: 10px;
+	margin: auto 10px auto 10px;
+}
+
+
+
+div.legend--marker-standard.desert {
+	background-color: rgba(242,242,195,1.0);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-standard.temperate {
+	background-color: rgba(32,251,1,1.0);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-standard.lush {
+	background-color: rgba(4,36,0,1.0);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-estate.desert {
+	background-color: rgb(144, 117, 42);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-estate.temperate {
+	background-color: rgba(26,205,2,1.0);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-estate.lush {
+	background-color: rgba(8,67,00,1.0);
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-standard.sold {
+	background-color: rgba(68, 93, 68, 0.8) !important;
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+div.legend--marker-estate.sold {
+	background-color: rgba(0,0,0, 0.8) !important;
+	border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.landsale--grid {
+	width: 1180px;
+	height: auto;
+	
+	margin: 0 auto;
+	border: 2px solid black;
+}
+
+#landsale--map {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+#landsale--paths {
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	left: 0;
+}
+
+#landsale--symbols {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
+
+.landgrid--row {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 10px;
+}
+
+
+
+
+   
 
   .asset-ptc-header{
 
@@ -359,6 +507,11 @@ flex-wrap: nowrap;
 	vertical-align:bottom;
 }
 
+.wallet-input-first-p{
+    padding: 0%;
+    margin: 1% 0;
+}
+
 #copy-wallet {
 	font-size: 1rem;
 	color: var(--clr-primary);
@@ -367,7 +520,7 @@ flex-wrap: nowrap;
 }
 
 #wallet-address{
-    display: flex;
+   
     align-items: center;
 }
 
@@ -531,12 +684,13 @@ flex-wrap: nowrap;
     }
 
     .secondary-nfts > aside > a {
-        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        
         padding: 0 2%;
         
     }
 
     .secondary-nfts > aside > a > img{
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         width: 70%;
     }
 
