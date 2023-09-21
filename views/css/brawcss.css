@@ -185,17 +185,9 @@ flex-wrap: nowrap;
 .brawl-content > article{
     width: 100%;
     color: rgb(255, 250, 240);
+    display: flex;
+    flex-direction: column;
    
-   
-
-
-    position: relative;    
-}
-
-.brawl-content > article::before{
-    content: "";
-
-    
    
     border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -207,15 +199,15 @@ flex-wrap: nowrap;
 
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0%;
+    
+    
     /*background-image: url('../images/cactus-frontier.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;*/
-    background-color: #f3621998;
+    background-color: #5c4e4798;
     background-blend-mode: color-burn;
-    filter: grayscale(100%);
+    
     
     
     
@@ -224,10 +216,11 @@ flex-wrap: nowrap;
 
 
 .brawl-content-text-div{
-    position: relative;
+    display: flex;
+    flex-direction: column;
     margin: 3% 3% 0 3%;
     padding: 0 2%;
-    background-color:#7763459f;
+    background-color:#af874a9f;
     border-radius: 1em;
     border: 2px solid #bf9f70;
     
@@ -302,7 +295,7 @@ flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
         font-size: 1.4em ;
-        width: 80%;
+        width: 90%;
         padding-bottom: 5%;
         color: rgb(255, 250, 240)
     
@@ -423,17 +416,30 @@ div.legend--marker-estate.sold {
 .map{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin: 3% 3% 0 3%;
+    padding: 0 2%;
+    background-color:#7763459f;
+    border-radius: 1em;
+    border: 2px solid #bf9f70;
+    padding-bottom: 10%;
+    
 }
 
 
 
-.landsale--grid {
-	width: 1180px;
+.landsale--grid  {
+	width: 1062px;
 	height: auto;
-	
+	position: relative;
 	margin: 0 auto;
 	border: 2px solid black;
+}
+
+
+
+.landsale--grid > img {
+    width: 1062px;
+    height: 660px;
 }
 
 #landsale--map {
@@ -460,7 +466,57 @@ div.legend--marker-estate.sold {
 .landgrid--row {
 	display: grid;
 	grid-auto-flow: column;
-	grid-auto-columns: 10px;
+	grid-auto-columns: 9px;
+}
+
+.landgrid--cell-single {
+	border: .5px solid rgba(0, 0, 0, 0.5);
+	width: 8px;
+	height: 8px;
+	z-index: 500 !important;
+}
+
+.landgrid--cell-single.desert {
+	background-color: rgba(242,242,195,1.0);
+}
+.landgrid--cell-reserved {
+	/* background-color: rgb(49, 207, 154) !important; */
+	border: 1px solid transparent;
+	width: 8px;
+	height: 8px;
+	z-index: 500;
+}
+.landgrid--cell-single.sold {
+	background-color: rgba(68, 93, 68, 0.8) !important;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.landgrid--cell-estate.tl {
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.landgrid--cell-estate.sold {
+	background-color: rgba(0,0,0, 0.8) !important;
+	border: 1px solid transparent;
+}
+
+.landgrid--cell-single.temperate {
+	background-color: rgba(32,251,1,1.0);
+}
+
+.landgrid--cell-single.lush {
+	background-color: rgba(4,36,0,1.0);
+}
+.landgrid--cell-estate.temperate {
+	background-color: rgba(26,205,2,1.0);
+}
+.landgrid--cell-estate.desert {
+	background-color: rgb(144, 117, 42);
+}
+.landgrid--cell-reserved.info {
+	background-color: blue;
+	border: 1px solid white;
+	z-index: 500;
 }
 
 
