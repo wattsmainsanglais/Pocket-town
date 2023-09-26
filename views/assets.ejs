@@ -168,6 +168,10 @@
 
                         </div>
 
+                        <div>
+                            <h2>Please check out the Pocket Towne Map below</h2>
+                        </div>
+
                         <div class="landsale--container">
                             
                             <p>
@@ -9588,6 +9592,99 @@
                             
     
                         </div>
+
+                        
+
+                            <div class="minting-options">
+
+                                <div class="option-send-ada">
+                                    <h2>Directly from your Wallet</h2>
+                                    <select id="amount-select-land" class="amount-select" onchange="javascript:updatePriceLand(this);">
+                                        <option value="1">1 for 50 ADA</option>
+                                        <option value="2">2 for 100 ADA</option>
+                                        <option value="3">3 for 150 ADA</option>
+                                        <option value="4">4 for 200 ADA</option>
+                                        <option value="5">5 for 250 ADA</option>
+                                        <option value="6">6 for 300 ADA</option>
+                                        <option value="7">7 for 350 ADA</option>
+                                        <option value="8">8 for 400 ADA</option>
+                                        <option value="9">9 for 450 ADA</option>
+                                        <option value="10">10 for 500 ADA</option>
+                                    </select>
+                                    <p id="send-message-land">Send Exactly 50 ADA To The Following Address</p>
+                                
+                                    <aside class="wallet-input"><input id="wallet-address-land" value="addr1v9z3gt5ye..." readonly="" aria-readonly="true" style="font-size: 1rem;"><i id="copy-wallet-land" onclick="javascript:copyTextLand();" class="fa fa-copy" aria-hidden="true"></i><span id="status" class="is-hidden">Copied</span></aside>
+                                
+                            
+                            <script>
+                                    function updatePriceLand(t) {
+                                        var v = t.options[t.selectedIndex].value * 50;
+                                        document.getElementById("send-message-land").innerHTML = "Send Exactly "+v+" ADA To The Following Address";
+                                    }
+                                    document.getElementById("copy-wallet-land").addEventListener('click', fadeOutEffect);
+                                    function fadeOutEffect() {
+                                    var fadeTarget = document.getElementById("status");
+                                    var fadeEffect = setInterval(function () {
+                                        if (!fadeTarget.style.opacity) {
+                                            fadeTarget.style.opacity = 1;
+                                        }
+                                        if (fadeTarget.style.opacity > 0) {
+                                            fadeTarget.style.opacity -= 0.1;
+                                        } else {
+                                            document.getElementById('status').classList.add("is-hidden");
+                                            fadeTarget.style.opacity = 1;
+                                            clearInterval(fadeEffect);
+                                        }
+                                    }, 200);
+                                } 
+                               
+                                
+                                    function copyTextLand() {
+                                        navigator.clipboard.writeText("addr1v9z3gt5yevgdahv0p6chzdrsn2adzkrpjqca7t67uytzqpcy26ds4").then( function() {
+                                            document.getElementById('status').classList.remove("is-hidden");
+                                        });
+                                    
+                                    }
+                                </script>
+                                
+                                    
+                                
+                            
+                            
+                            </div>
+
+                            <div class="buy-nfts-mint">
+
+                                
+                                <h2>Mint directly at BuyNFTs.exchange</h2> 
+                                <p>Please click the link below. <br>All major wallets are accepted.</p>
+                                
+                                <aside>
+
+                                    <a href="https://buynfts.exchange/sales/pt/" target="_new">click here</a>
+                                </aside>
+                                
+
+
+                            </div> 
+
+                            <div class="secondary-nfts">
+                                <h2>
+                                    NFT's are available on secondary markets - Land plots, Estates and Paper dolls - such as jpg.store <img src="./images/dex,-cardano-logos/jpg-logo-redesign-dark.svg" />
+
+                                </h2>
+                                <aside>
+                                    <a href="https://www.jpg.store/collection/pockettownelandrush-plots"><img src="./images/dex,-cardano-logos/land-plots-store.webp"></a>
+                                    <a href="https://www.jpg.store/collection/pockettownelandrush-estates"><img src="./images/dex,-cardano-logos/land-estates-store.webp"></a>
+                                    <a href="https://www.jpg.store/collection/pockettowne"><img src="./images/dex,-cardano-logos/dolls-store.webp"></a>
+                                </aside>
+
+                            </div>
+                            
+                            
+                        </div>
+
+                        
 
                         
                     </div>
