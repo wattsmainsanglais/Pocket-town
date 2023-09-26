@@ -519,6 +519,19 @@ div.legend--marker-estate.sold {
 	z-index: 500;
 }
 
+#tooltip {
+	display: none;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.2rem;
+	background: #ffffcc;
+	border: 1px solid black;
+	z-index: 9000;
+	color: black;
+	max-width: 400px;
+	position: fixed;
+	padding: .5em 1em;
+}
+
 
 
 

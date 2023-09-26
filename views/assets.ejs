@@ -169,6 +169,7 @@
                         </div>
 
                         <div class="landsale--container">
+                            
                             <p>
                                 </p><div class="text-center">
                                     <div class="text-center">Locate</div>
@@ -225,6 +226,7 @@
                                 <div id="plotupdate-status" class="text-center ishidden is-hidden">Getting Updated Plot Data</div>
                             <p></p>
                             <div id="landsalegrid" class="landsale--grid border-2-black">
+                                <div id="tooltip" style="display: none;">-54,23<br>( Desert Estate Deed )</div>
                                 <img id="landsale--map" src="./images/landrush/landsalemapbg.jpg">
                                 <img id="landsale--paths" src="./images/landrush/Paths.png">
                                 <img id="landsale--symbols" src="./images/landrush/Symbols.png">
@@ -9583,179 +9585,179 @@
                                     <div id="59,-33" class="landgrid--cell-single desert" biome="Desert" pos="59,-33"></div>
                                 </div>
                             </div>
-                            <script type="application/javascript">
-                                // function reserveTip(ev){
-                                //     document.getElementById("tooltip").innerHTML = this.id;
-                                //     var x = ev.clientX;
-                                //     var y = ev.clientY + 10;
-                                //     document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
-                                // }
-                                function playareasTip(ev) {
-                                    document.getElementById("tooltip").innerHTML = "<b>"+this.getAttribute('data-label') + "</b><br/>" + this.getAttribute('data-desc');
-                                    var x = ev.clientX;
-                                    var y = ev.clientY + 10;
-                                    document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
-                                }
-                                function createTip(ev){
-                                    var pBiome = this.getAttribute("biome")
-                                    var cList = this.classList
-                                    var pType = ""
-                                    for(var i=0;i<cList.length;i++) {
-                                        if(cList[i] == "landgrid--cell-estate") {
-                                            pType = "Estate Deed"
-                                        }
-                                        if(cList[i] == "landgrid--cell-single") {
-                                            pType = "Land Deed"
-                                        }
-                                    }
-                                    var biome = this.getAttribute('biome')
-                                    //var tier = this.getAttribute('tier')
-                                    document.getElementById("tooltip").innerHTML = this.getAttribute("pos") + "<br/>( " + pBiome + " " + pType + " )";
-                                    //document.getElementById("tooltip").innerHTML = this.id + "<br/>"
-                                    
-                                    var x = ev.clientX;
-                                    var y = ev.clientY + 10;
-                                    document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
-                                    
-                                }
-        
-                                function cancelTip(ev){
-                                    document.getElementById("tooltip").setAttribute("style", "display: none;")
-                                }
-    
-                                // Reserved Temporary
-                                // var reservedCells = document.getElementsByClassName('landgrid--cell-reserved');
-                                // for(var i=0;i<reservedCells.length;i++) {
-                                //     reservedCells[i].addEventListener('mouseover', reserveTip);
-                                //     reservedCells[i].addEventListener('mouseout', cancelTip);
-                                // }
-                                var infoCells = [
-                                    { "pos":"-49,26","label":"The Wondrous Cave", "description":"Many mysteries, challenges, and treasures await you inside!" },
-                                    { "pos":"56,30","label":"The Deep Pocketer Mine","description":"Get all the precious gems and minerals your heart desires!"},
-                                    { "pos":"7,30", "label":"Cops and Robbers!","description":"Protect the train or rob it...play the hero or the villain."},
-                                    { "pos":"-56,-29", "label":"The Mirage Carnival","description":"Put your skills to the test in a variety of festival themed games!"},
-                                    { "pos":"-36,-8", "label":"Ol' Boot Hill","description":"How do zombies always manage to sneak up on you?"},
-                                    { "pos":"-34,-5", "label":"Into The Sky","description":"Defeat Zerk in a twisted platforming domain of his creation. Time based challenges and unique rewards await."},
-                                    { "pos":"44,8", "label":"Marketplace","description":"This shopping area will a concentrated place to find many of the goods you can buy and sell in Pocket Towne."},
-                                    { "pos":"43,-3", "label":"Apartments","description":"Cram yourself and your stuff into an apartment and live the simple life."},
-                                    { "pos":"32,-25", "label":"The Overgrown","description":"Dense plants and fierce creatures hold this area as their own. Bring your strongest weapons and friends if you want to survive here."},
-                                    { "pos":"9,3", "label":"Central Train Hub","description":"Handles train scheduling, towne exports, and maintenance of the trains."},
-                                    { "pos":"35,30", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
-                                    { "pos":"59,-25", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
-                                    { "pos":"-17,-33", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
-                                    { "pos":"-58,-8", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
-                                    { "pos":"-51,31", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"-44,24", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"-57,-5", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"-20,-31", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"52,-28", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"46,11", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"0,21", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"39,-3", "label":"Train Station","description":"A place to get on or off the train"},
-                                    { "pos":"38,28", "label":"Train Station","description":"A place to get on or off the train"},
-                                ]
-                                infoCells.forEach( cell => {
-                                    document.getElementById(cell.pos).setAttribute('data-label',cell.label);
-                                    document.getElementById(cell.pos).setAttribute('data-desc',cell.description);
-                                    document.getElementById(cell.pos).classList.add('info');
-                                    document.getElementById(cell.pos).addEventListener('mouseover', playareasTip);
-                                    document.getElementById(cell.pos).addEventListener('mouseout', cancelTip);
-                                })
-                                var singleCells = document.getElementsByClassName('landgrid--cell-single');
-                                for(var i=0; i< singleCells.length; i++) {
-                                    // singleCells[i].setAttribute('tier', plot_tooltip_data[singleCells[i].id].tooltip.tier)
-                                    // singleCells[i].setAttribute('biome', plot_tooltip_data[singleCells[i].id].tooltip.biome)
-                                    // singleCells[i].setAttribute('type', plot_tooltip_data[singleCells[i].id].tooltip.type)
-                                    singleCells[i].setAttribute("pos",singleCells[i].id)
-                                    singleCells[i].addEventListener('mouseover', createTip);
-                                    singleCells[i].addEventListener('mouseout', cancelTip);
-                                }
-                                var singleCells = document.getElementsByClassName('landgrid--cell-estate');
-                                for(var i=0; i< singleCells.length; i++) {
-                                    // singleCells[i].setAttribute('tier', plot_tooltip_data[singleCells[i].id].tooltip.tier)
-                                    // singleCells[i].setAttribute('biome', plot_tooltip_data[singleCells[i].id].tooltip.biome)
-                                    // singleCells[i].setAttribute('type', plot_tooltip_data[singleCells[i].id].tooltip.type)
-                                    singleCells[i].addEventListener('mouseover', createTip);
-                                    singleCells[i].addEventListener('mouseout', cancelTip);
-                                }
-    
-                                async function updatePlots() {
-                                    document.getElementById('plotupdate-status').classList.remove('is-hidden')
-                                    var url = "https://api.koios.rest/api/v0/asset_policy_info?_asset_policy=79631a72d44608d24a3a2d226e90a20c58aa444aa76315b3119245eb"
-                                    fetch(url)
-                                    .then(res => res.json())
-                                    .then(out => {
-                                        out.forEach(tx=> {
-                                            if(tx.asset_name_ascii.length > 0) {
-                                                var name = tx.asset_name_ascii
-                                                var expr = /PT(Land|Estate)(Plus|Minus)(\d+)(Plus|Minus)(\d+)/
-                                                var plot = name.match(expr)
-                                                if(plot) {
-                                                    var xM = (plot[2] == "Minus") ? "-" + plot[3] : plot[3]
-                                                    var yM = (plot[4] == "Minus") ? "-" + plot[5] : plot[5]
-                                                    var id = xM + "," + yM
-                                                    var elems = document.querySelectorAll("[pos='"+id+"']")
-                                                    elems.forEach( e => {
-                                                        if(!e.classList.contains("sold")) {
-                                                            e.classList.add("sold")
-                                                        }
-                                                    });
-                                                }
-                                            }
-                                        })
-                                    })
-                                    .finally(o=>document.getElementById('plotupdate-status').classList.add('is-hidden'))
-                                    .catch(err => { throw err });
-                                    
-                                }
-                                updatePlots()
-                                // async function updatePlots() {
-    
-                                //     document.getElementById('plotupdate-status').classList.remove('is-hidden')
-                                //     const Http = new XMLHttpRequest();
-                                //     const url = 'landrushstatus.php';
-                                //     Http.open("GET", url);
-                                //     Http.send();
-                                //     Http.onreadystatechange = (e) => {
-    
-                                //         if (Http.readyState == 4 && Http.status == 200) {
-                                //             if (Http.responseText) {
-                                //                 try {
-                                //                     var results = JSON.parse(Http.responseText)
-                                //                     results.forEach( (collection) => {
-                                //                         collection.forEach( (entry) => {
-                                //                             if(entry.name.includes("PT")) {
-                                //                                 var name = entry.displayname
-                                //                                 var expr = /PT(Land|Estate)(Plus|Minus)(\d+)(Plus|Minus)(\d+)/
-                                //                                 var matches = name.match(expr)
-                                //                                 var xM = (matches[2] == "Minus") ? "-" + matches[3] : matches[3]
-                                //                                 var yM = (matches[4] == "Minus") ? "-" + matches[5] : matches[5]
-                                //                                 var id = xM + "," + yM
-                                //                                 var elems = document.querySelectorAll("[pos='"+id+"']")
-                                //                                 elems.forEach( e => e.classList.add("sold") );
-                                //                             }
-                                                            
-                                //                         })
-                                //                     })
-                                //                     document.getElementById('plotupdate-status').classList.add('is-hidden')
-                                //                 } catch(err) {
-                                //                     console.log(err)
-                                //                 }
-                                                
-                                //             }
-                                //         }
-                                //     }
-                                // }
-                                // updatePlots()
-                                
-                            </script>
+                            
     
                         </div>
 
                         
                     </div>
 
-                   
+                    <script type="application/javascript">
+                        // function reserveTip(ev){
+                        //     document.getElementById("tooltip").innerHTML = this.id;
+                        //     var x = ev.clientX;
+                        //     var y = ev.clientY + 10;
+                        //     document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
+                        // }
+                        function playareasTip(ev) {
+                            document.getElementById("tooltip").innerHTML = "<b>"+this.getAttribute('data-label') + "</b><br/>" + this.getAttribute('data-desc');
+                            var x = ev.clientX;
+                            var y = ev.clientY + 10;
+                            document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
+                        }
+                        function createTip(ev){
+                            var pBiome = this.getAttribute("biome")
+                            var cList = this.classList
+                            var pType = ""
+                            for(var i=0;i<cList.length;i++) {
+                                if(cList[i] == "landgrid--cell-estate") {
+                                    pType = "Estate Deed"
+                                }
+                                if(cList[i] == "landgrid--cell-single") {
+                                    pType = "Land Deed"
+                                }
+                            }
+                            var biome = this.getAttribute('biome')
+                            //var tier = this.getAttribute('tier')
+                            document.getElementById("tooltip").innerHTML = this.getAttribute("pos") + "<br/>( " + pBiome + " " + pType + " )";
+                            //document.getElementById("tooltip").innerHTML = this.id + "<br/>"
+                            
+                            var x = ev.clientX;
+                            var y = ev.clientY + 10;
+                            document.getElementById("tooltip").setAttribute('style','left: '+x+'px; top: '+y+'px;display: inline-block;');
+                            
+                        }
+
+                        function cancelTip(ev){
+                            document.getElementById("tooltip").setAttribute("style", "display: none;")
+                        }
+
+                        // Reserved Temporary
+                        // var reservedCells = document.getElementsByClassName('landgrid--cell-reserved');
+                        // for(var i=0;i<reservedCells.length;i++) {
+                        //     reservedCells[i].addEventListener('mouseover', reserveTip);
+                        //     reservedCells[i].addEventListener('mouseout', cancelTip);
+                        // }
+                        var infoCells = [
+                            { "pos":"-49,26","label":"The Wondrous Cave", "description":"Many mysteries, challenges, and treasures await you inside!" },
+                            { "pos":"56,30","label":"The Deep Pocketer Mine","description":"Get all the precious gems and minerals your heart desires!"},
+                            { "pos":"7,30", "label":"Cops and Robbers!","description":"Protect the train or rob it...play the hero or the villain."},
+                            { "pos":"-56,-29", "label":"The Mirage Carnival","description":"Put your skills to the test in a variety of festival themed games!"},
+                            { "pos":"-36,-8", "label":"Ol' Boot Hill","description":"How do zombies always manage to sneak up on you?"},
+                            { "pos":"-34,-5", "label":"Into The Sky","description":"Defeat Zerk in a twisted platforming domain of his creation. Time based challenges and unique rewards await."},
+                            { "pos":"44,8", "label":"Marketplace","description":"This shopping area will a concentrated place to find many of the goods you can buy and sell in Pocket Towne."},
+                            { "pos":"43,-3", "label":"Apartments","description":"Cram yourself and your stuff into an apartment and live the simple life."},
+                            { "pos":"32,-25", "label":"The Overgrown","description":"Dense plants and fierce creatures hold this area as their own. Bring your strongest weapons and friends if you want to survive here."},
+                            { "pos":"9,3", "label":"Central Train Hub","description":"Handles train scheduling, towne exports, and maintenance of the trains."},
+                            { "pos":"35,30", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
+                            { "pos":"59,-25", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
+                            { "pos":"-17,-33", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
+                            { "pos":"-58,-8", "label":"Goblin Tower Defense","description":"Help protect Pocket Towne from invading goblins. They want what we got!"},
+                            { "pos":"-51,31", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"-44,24", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"-57,-5", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"-20,-31", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"52,-28", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"46,11", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"0,21", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"39,-3", "label":"Train Station","description":"A place to get on or off the train"},
+                            { "pos":"38,28", "label":"Train Station","description":"A place to get on or off the train"},
+                        ]
+                        infoCells.forEach( cell => {
+                            document.getElementById(cell.pos).setAttribute('data-label',cell.label);
+                            document.getElementById(cell.pos).setAttribute('data-desc',cell.description);
+                            document.getElementById(cell.pos).classList.add('info');
+                            document.getElementById(cell.pos).addEventListener('mouseover', playareasTip);
+                            document.getElementById(cell.pos).addEventListener('mouseout', cancelTip);
+                        })
+                        var singleCells = document.getElementsByClassName('landgrid--cell-single');
+                        for(var i=0; i< singleCells.length; i++) {
+                            // singleCells[i].setAttribute('tier', plot_tooltip_data[singleCells[i].id].tooltip.tier)
+                            // singleCells[i].setAttribute('biome', plot_tooltip_data[singleCells[i].id].tooltip.biome)
+                            // singleCells[i].setAttribute('type', plot_tooltip_data[singleCells[i].id].tooltip.type)
+                            singleCells[i].setAttribute("pos",singleCells[i].id)
+                            singleCells[i].addEventListener('mouseover', createTip);
+                            singleCells[i].addEventListener('mouseout', cancelTip);
+                        }
+                        var singleCells = document.getElementsByClassName('landgrid--cell-estate');
+                        for(var i=0; i< singleCells.length; i++) {
+                            // singleCells[i].setAttribute('tier', plot_tooltip_data[singleCells[i].id].tooltip.tier)
+                            // singleCells[i].setAttribute('biome', plot_tooltip_data[singleCells[i].id].tooltip.biome)
+                            // singleCells[i].setAttribute('type', plot_tooltip_data[singleCells[i].id].tooltip.type)
+                            singleCells[i].addEventListener('mouseover', createTip);
+                            singleCells[i].addEventListener('mouseout', cancelTip);
+                        }
+
+                        async function updatePlots() {
+                            document.getElementById('plotupdate-status').classList.remove('is-hidden')
+                            var url = "https://api.koios.rest/api/v0/asset_policy_info?_asset_policy=79631a72d44608d24a3a2d226e90a20c58aa444aa76315b3119245eb"
+                            fetch(url)
+                            .then(res => res.json())
+                            .then(out => {
+                                out.forEach(tx=> {
+                                    if(tx.asset_name_ascii.length > 0) {
+                                        var name = tx.asset_name_ascii
+                                        var expr = /PT(Land|Estate)(Plus|Minus)(\d+)(Plus|Minus)(\d+)/
+                                        var plot = name.match(expr)
+                                        if(plot) {
+                                            var xM = (plot[2] == "Minus") ? "-" + plot[3] : plot[3]
+                                            var yM = (plot[4] == "Minus") ? "-" + plot[5] : plot[5]
+                                            var id = xM + "," + yM
+                                            var elems = document.querySelectorAll("[pos='"+id+"']")
+                                            elems.forEach( e => {
+                                                if(!e.classList.contains("sold")) {
+                                                    e.classList.add("sold")
+                                                }
+                                            });
+                                        }
+                                    }
+                                })
+                            })
+                            .finally(o=>document.getElementById('plotupdate-status').classList.add('is-hidden'))
+                            .catch(err => { throw err });
+                            
+                        }
+                        updatePlots()
+                        // async function updatePlots() {
+
+                        //     document.getElementById('plotupdate-status').classList.remove('is-hidden')
+                        //     const Http = new XMLHttpRequest();
+                        //     const url = 'landrushstatus.php';
+                        //     Http.open("GET", url);
+                        //     Http.send();
+                        //     Http.onreadystatechange = (e) => {
+
+                        //         if (Http.readyState == 4 && Http.status == 200) {
+                        //             if (Http.responseText) {
+                        //                 try {
+                        //                     var results = JSON.parse(Http.responseText)
+                        //                     results.forEach( (collection) => {
+                        //                         collection.forEach( (entry) => {
+                        //                             if(entry.name.includes("PT")) {
+                        //                                 var name = entry.displayname
+                        //                                 var expr = /PT(Land|Estate)(Plus|Minus)(\d+)(Plus|Minus)(\d+)/
+                        //                                 var matches = name.match(expr)
+                        //                                 var xM = (matches[2] == "Minus") ? "-" + matches[3] : matches[3]
+                        //                                 var yM = (matches[4] == "Minus") ? "-" + matches[5] : matches[5]
+                        //                                 var id = xM + "," + yM
+                        //                                 var elems = document.querySelectorAll("[pos='"+id+"']")
+                        //                                 elems.forEach( e => e.classList.add("sold") );
+                        //                             }
+                                                    
+                        //                         })
+                        //                     })
+                        //                     document.getElementById('plotupdate-status').classList.add('is-hidden')
+                        //                 } catch(err) {
+                        //                     console.log(err)
+                        //                 }
+                                        
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                        // updatePlots()
+                        
+                    </script>
                     
                 </article>
     
