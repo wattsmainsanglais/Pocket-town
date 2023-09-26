@@ -176,17 +176,17 @@ flex-wrap: nowrap;
     z-index: 1;
     font-size: 1.2em;
     text-align: center;
-    color: whitesmoke;
+    color: #f6ea8b;
     backdrop-filter: blur(3px);
-    padding: 2px;
+    padding: 4px;
    
     margin-bottom: 10%;
     margin-left: 15%;
-    text-shadow: 0 0 1px #f6ea8b;
+    text-shadow: 0 0 1px black;
     
 }
 
-.splash-blurb > h2, .splash-blurb > h3 {
+/*.splash-blurb > h2, .splash-blurb > h3 {
     animation:  glowing 15s ease-in-out infinite 2s;
 }
 
@@ -201,25 +201,25 @@ flex-wrap: nowrap;
     }
 
     40%{
-        text-shadow: 0 0 8px #f6ea8b;
+        text-shadow: 0 0 5px #f6ea8b;
     }
     41%{
         text-shadow: 0 0 2px #f6ea8b;
     }
   
     50%{
-        text-shadow: 0 0 3px #f6ea8b;
-    }
-
-    75%{
         text-shadow: 0 0 2px #f6ea8b;
     }
 
-    100%{
+    75%{
         text-shadow: 0 0 1px #f6ea8b;
     }
+
+    100%{
+        text-shadow: 0 0 0px #f6ea8b;
+    }
   
-   
+  /* 
     
 }
 
