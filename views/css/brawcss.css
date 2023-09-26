@@ -532,6 +532,33 @@ div.legend--marker-estate.sold {
 	padding: .5em 1em;
 }
 
+.buy-land-article{
+    margin-top: 3%;
+    border-top: 4px solid #bf9f70;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-land-article-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+.buy-land-article-header h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: .9em;
+}
+
+
+
 
 
 
@@ -715,7 +742,7 @@ div.legend--marker-estate.sold {
         
         text-align: center;
         border-right: 4px solid #bf9f70;
-        
+        padding-bottom: 3%;
     }
 
     .buy-nfts-mint{
@@ -727,8 +754,12 @@ div.legend--marker-estate.sold {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 3%;
 
+    }
 
+    .buy-nfts-mint > h2{
+        text-align: center;
     }
 
     .buy-nfts-mint p{
