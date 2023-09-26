@@ -144,20 +144,27 @@ flex-wrap: nowrap;
 
 .contact-icon-wrapper{
     grid-column: 3 / 4;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: flex-end   ;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
     
 
 }
 
-.contact-icon-wrapper img{
+.contact-icon-wrapper > a > img{
+    
     margin: 3% 0;
-    padding-right: 8%;
+    padding-right: 3%;
+}
+
+.twitter{
+     width: 53px;
+    height: 53px;
 }
 
 .contact-icon-wrapper img:hover{
@@ -219,9 +226,10 @@ flex-wrap: nowrap;
         text-shadow: 0 0 0px #f6ea8b;
     }
   
-  /* 
+  
     
 }
+*/
 
 @keyframes icondance {
 
