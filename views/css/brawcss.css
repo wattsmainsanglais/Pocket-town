@@ -289,6 +289,88 @@ flex-wrap: nowrap;
     
     }  
 
+    /* button/ quick buy section */
+
+    .quick-buy-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .quick-buy{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 2%;
+        background-color:#7763459f;
+        border-radius: 1em;
+        border: 2px solid #bf9f70;
+    }
+
+    .quick-buy > h2{
+        font-size: 1.3em;
+        text-shadow: 0 0 5px #f6ea8b,
+        0 0 25px  #f6ea8b,
+        0 0 50px #f6ea8b,
+        0 0 100px #f6ea8b;
+        margin-bottom: 2%;
+    }
+
+    button {
+        height: 50px;
+        margin: 5px;
+        width: 120px;
+        background: #aa6528;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: 'Hard Western', 'Courier New', Courier, monospace;
+        letter-spacing: .15rem;
+        border: solid #404C5D 1px;
+        font-size: 16px;
+        color: black;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #aa6528, #f3aa43);
+        -webkit-box-shadow: -1px -5px 15px #c17321, 
+                     5px  5px 15px #f3aa43, 
+          inset      5px  5px 10px #aa6528, 
+          inset     -5px -5px 10px #aa6528;
+        box-shadow: -1px -5px 15px #f3aa43, 
+                     5px  5px 15px #f3aa43, 
+          inset      5px  5px 10px #aa6528, 
+          inset     -5px -5px 10px #aa6528;
+      }
+      
+      button:hover {
+        -webkit-box-shadow: 1px 1px 13px #ffe18c,
+                          -1px -1px 13px #f6ea8b;
+        box-shadow: 1px 1px 13px #ffe18c,
+                   -1px -1px 13px #f6ea8b;
+        color: black;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+        text-shadow: 0 0 5px #f6ea8b,
+                0 0 25px  #f6ea8b,
+                0 0 50px #f6ea8b,
+                0 0 100px #f6ea8b;
+      }
+      
+      button:active {
+        -webkit-box-shadow: 1px 1px 13px #f3aa43,
+                           -1px -1px 33px #f6ea8b;
+        box-shadow: 1px 1px 13px #f3aa43,
+                   -1px -1px 33px #f6ea8b;
+        color: black;
+        -webkit-transition: 100ms;
+        transition: 100ms;
+      }
+
     .asset-content{
         margin-top: 5%;
         display: flex;
@@ -305,13 +387,17 @@ flex-wrap: nowrap;
   .asset-land-rush-header, .asset-ptc-header{
     padding: 3%;
     
-    margin-top: 14%;
+    margin-top: 10%;
     position: relative;
     font-size: 3em;
     backdrop-filter: blur(2px);
     text-shadow: 0px -1px 21px #ffe5a9;
 
   } 
+
+  .asset-land-rush-header{
+    margin-top: 0%;
+  }
    /* Land rush css */
 
   #welcomevideo {
@@ -559,7 +645,7 @@ div.legend--marker-estate.sold {
 
 
 
-
+/* pocket change css */
 
 
    
@@ -572,6 +658,24 @@ div.legend--marker-estate.sold {
   .ptc-till-wrapper aside img{
     width: 50%;
   }
+
+.bank-of-ptc-header{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+} 
+
+.bank-of-ptc-header > aside {
+    margin: 0;
+    padding: 0;
+    width: 5%
+}
+
+
+ .pocket-change-logo{
+    width: 100%;
+ }
+
 
 
   /* cash register css */
