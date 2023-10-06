@@ -71,6 +71,12 @@ flex-wrap: nowrap;
     
 }
 
+
+.nav-container{
+    display: none;
+}
+
+
 .navbar.sticking{
     width: 100%;
     opacity: .8;
@@ -84,7 +90,7 @@ flex-wrap: nowrap;
 }
 
 
-.navbar ul {
+.desktop-list {
     
     list-style: none;
     display: flex;
@@ -96,7 +102,7 @@ flex-wrap: nowrap;
 
 }
 
-.navbar > ul li, .navbar > ul a {
+.desktop-list > li, .d-ul-a {
     display: flex;
     justify-content: center;
     text-wrap: nowrap;
@@ -107,7 +113,7 @@ flex-wrap: nowrap;
     transition: text-shadow .5s, color .5s;
 }
 
-.navbar ul li:hover {
+.desktop-list > li:hover {
     cursor: pointer;
     color: #887a6e;
     text-shadow: 0 0 5px #f6ea8b,
@@ -750,6 +756,352 @@ flex-wrap: nowrap;
 	margin-inline: 0.5em;
    
 }
+
+@media only screen and (max-width: 480px) {
+
+    .navbar{
+       
+    
+        position: absolute;
+        top: 0;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 0;
+        opacity: 1;
+        background-color: transparent;
+        color: black;
+        z-index: 2;
+    
+      }
+    
+      .nav-container {
+        width: 100%;
+        height: 60px;
+        grid-column: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .nav-container .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+      }
+      
+      .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .desktop-list{
+        display: none;
+      }
+      
+      .hamburger-list {
+        padding-top: 20%;
+        box-shadow: inset 0 0 2000px #F46419;
+        height: 60%;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+    
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        background-color: #F46419;
+      }
+      
+      .h-ul-a {
+        padding-bottom: 2%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background-color: #F46419;
+      }
+    
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-list {
+        transform: translateX(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
+    
+      .nav-container input[type="checkbox"]:checked ~ .language-toggle{
+        display: none;
+      }
+    
+      .splash{
+        padding-top: 15%;
+        
+        width: 100%;
+        background-image: url('../images/small-screen-backgrounds/pt-cowboy-sunset-mobile.png');
+       
+        background-size: contain;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    
+    .splash::before{
+        width: 100%;
+       
+        
+        background-size: contain;
+        content: "";
+      
+        
+        opacity: 0.8;
+    
+    }
+
+      .splash-logo-wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5% 70% 15%;
+        grid-gap: 5%;
+        grid-template-rows: auto;
+        opacity: 1;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        
+       
+        
+    }
+    
+    .splash-logo-wrapper-img-wrapper{
+        display: flex;
+        justify-content: center;
+        grid-column: 2 / 3;
+    }
+
+        
+    .splash-logo-wrapper-img-wrapper > img{
+       width: 150px;
+    }
+    
+    
+    
+    .contact-icon-wrapper{
+        grid-column: 3 / 4;
+        width: 100%;
+        display: flex;
+        justify-content: center  ;
+        
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        
+    
+    }
+
+    /* overlay css 480 */
+    .overlay{
+        width: 100%;
+        height: 100%;
+       
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;     
+        
+        
+        
+        position: relative;    
+
+    }
+
+    .overlay::before{
+        content: "";
+
+    
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 600x;/* parrallax */
+        background-image: url('../images/small-screen-backgrounds/pt-cowboy-cave-mobile.png');
+        background-size: cover;
+        
+        filter: sepia(40%);
+        
+        }  
+
+    .overlay-inside{
+        position: relative;
+
+    }    
+
+    .scroller-container{
+        display: none;
+    }
+
+    .road-map{
+        width: 100%;
+        margin-top: 8%;
+        padding: 4% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../images/small-screen-backgrounds/pt-halls-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%);
+        
+    }
+
+    .team{
+
+        width: 100%;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        padding-top: 5%;
+        padding-bottom: 7%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../images/small-screen-backgrounds/frontier-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%);
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-inside-wrapper-first{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-inside-wrapper-two{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    one{
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+    }
+
+    two{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        
+    }
+
+    three{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+    }
+
+    four{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        
+    }
+    five{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        
+    }
+
+
+
+    footer{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    
+        padding-top: 3%;
+        border-top: 5px solid black;
+    
+    
+      }
+    
+      footer::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('../images/footerlogos/Footer.jpg');
+        background-size: cover;
+        filter: contrast(40%);
+    
+      }
+        
+     
+
+
+}
+
+
+
+
 
 @media only screen and (min-width: 1380px) and (max-width: 2000px) {
 
