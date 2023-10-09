@@ -479,8 +479,8 @@ flex-wrap: nowrap;
     
     flex: none;
 
-    font-family: 'Nixie One', cursive;
-    font-weight: 800;
+    
+    font-weight: 200;
     
     
   }
@@ -507,13 +507,32 @@ flex-wrap: nowrap;
 
   }
 
-  .scroll-item article{
-    width: 100%;
-    filter: grayscale(100%);
-    transition: 0.5s;
-    
-    
-}
+
+  .road-box{
+      width: 100%;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+  .road-box > h2 {
+    font-size: 1.6em;
+    padding-bottom: 5%;
+  }
+
+  .road-box > p{
+
+    padding: 5% 2%;
+
+    }
+
+  .green-tick{
+    color: green;
+    font-size: 2em;
+  }
+
 
 /* Team css */
 
