@@ -507,6 +507,30 @@ flex-wrap: nowrap;
 
   }
 
+  .nextBtn{
+    transform: rotate(90deg);
+  }
+
+  .backBtn{
+    transform: rotate(270deg);
+
+  }
+
+  .nextBtn:hover{
+    transform: translateX(5px) rotate(90deg);
+    cursor: pointer;
+    
+
+  }
+  
+  
+  .backBtn:hover{
+    transform: translateX(-5px) rotate(270deg);
+    cursor: pointer;
+    
+
+  }
+
 
   .road-box{
       width: 100%;

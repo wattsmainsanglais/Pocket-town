@@ -135,7 +135,7 @@
 
             </div>
             <div class="road-map-scroller-wrap">
-                <img src="images/left-arrow.png" class="backBtn"> 
+                <img src="images/cactus_icon_126724.png" class="backBtn"> 
 
                 <div class="scroller-container">
 
@@ -214,7 +214,7 @@
 
                 </div>
 
-                <img src="images/left-arrow.png" class="nextBtn"> 
+                <img src="images/cactus_icon_126724.png" class="nextBtn"> 
 
             </div>
 
@@ -351,6 +351,8 @@
 
 
 <script>
+
+    // road map scroller
     let scrollcontainer = document.querySelector(".scroller-container");
 
     scrollcontainer.addEventListener('wheel', (e) => {
@@ -359,7 +361,35 @@
         scrollcontainer.style.scrollBehavior = 'auto';
     })
 
-// sticky nav js
+    let backBtn = document.querySelector('.backBtn');
+    let nextBtn = document.querySelector('.nextBtn');
+
+    nextBtn.addEventListener('click', () => {
+
+    
+        scrollcontainer.scrollBehavior = 'smooth';
+        if(window.innerWidth > 480){
+            scrollcontainer.scrollLeft += 600;
+        } else {
+            scrollcontainer.scrollLeft += 200;
+        }
+        
+})
+
+backBtn.addEventListener('click', () => {
+
+    
+scrollcontainer.scrollBehavior = 'smooth';
+if(window.innerWidth > 480){
+    scrollcontainer.scrollLeft -= 600;
+} else {
+    scrollcontainer.scrollLeft -= 200;
+}
+
+})
+
+
+// sticky nav js / sunset nav
     
 const primaryHeader = document.querySelector('.navbar')
 const scrollWatcher = document.createElement('div');
