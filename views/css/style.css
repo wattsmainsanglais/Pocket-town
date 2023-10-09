@@ -759,6 +759,10 @@ flex-wrap: nowrap;
 
 @media only screen and (max-width: 480px) {
 
+  body{
+    font-size: 0.7em;
+  }
+
     .navbar{
        
     
@@ -880,11 +884,11 @@ flex-wrap: nowrap;
     
       .splash{
         padding-top: 15%;
-        
+        min-height: 520px;
         width: 100%;
         background-image: url('../images/small-screen-backgrounds/pt-cowboy-sunset-mobile.png');
-       
-        background-size: contain;
+        
+        background-size: cover;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -893,9 +897,9 @@ flex-wrap: nowrap;
     
     .splash::before{
         width: 100%;
-       
         
-        background-size: contain;
+        
+        background-size: cover;
         content: "";
       
         
@@ -927,6 +931,12 @@ flex-wrap: nowrap;
         
     .splash-logo-wrapper-img-wrapper > img{
        width: 150px;
+    }
+
+    .splash-blurb{
+      top: 40px;
+      width: 80%;
+      padding-bottom: 5%;
     }
     
     
@@ -984,6 +994,15 @@ flex-wrap: nowrap;
         position: relative;
 
     }    
+
+    /* faq media 480  */
+
+    .faq{
+      margin: 5%;
+      width: 90%
+      
+    }
+
 
     .scroller-container{
         display: none;
@@ -1092,6 +1111,14 @@ flex-wrap: nowrap;
         background-size: cover;
         filter: contrast(40%);
     
+      }
+
+      .footer-info{
+        font-size: 0.5em;
+      }
+
+      .footer-logos > a > img{
+        width: 50%
       }
         
      
