@@ -18,7 +18,7 @@ flex-wrap: nowrap;
     width: 100%;
    
     backdrop-filter: blur(10px);
-    filter: none;
+   
     
     color: black;
     border-bottom: 3px solid #887a6e;
@@ -518,6 +518,10 @@ div.legend--marker-estate.sold {
     
 }
 
+.pocket-towne-map-header-mobile{
+    display: none;
+}
+
 
 
 .landsale--grid  {
@@ -1003,13 +1007,16 @@ div.legend--marker-estate.sold {
           top: 0;
           flex-wrap: nowrap;
           justify-content: space-between;
-          width: 70%;
+          width: 95%;
           margin-top: 10%;
           margin-left: 0;
           opacity: 1;
           background-color: transparent;
           color: black;
           z-index: 2;
+          box-shadow: none;
+          backdrop-filter: none;
+          border: none;
       
         }
       
@@ -1075,7 +1082,7 @@ div.legend--marker-estate.sold {
         
         .hamburger-list {
           padding-top: 20%;
-          box-shadow: inset 0 0 2000px #F46419;
+          box-shadow: inset 0 0 2000px #f6ea8b;
           height: 60%;
           width: 100%;
           transform: translate(-150%);
@@ -1085,14 +1092,14 @@ div.legend--marker-estate.sold {
           padding-left: 50px;
           transition: transform 0.5s ease-in-out;
           text-align: center;
-          background-color: #F46419;
+          background-color: #f6ea8b;
         }
         
         .h-ul-a {
           padding-bottom: 2%;
           font-size: 1.2rem;
           font-weight: 500;
-          background-color: #F46419;
+          background-color: #f6ea8b;
         }
       
         .nav-container input[type="checkbox"]:checked ~ .hamburger-list {
@@ -1114,4 +1121,84 @@ div.legend--marker-estate.sold {
         .nav-container input[type="checkbox"]:checked ~ .language-toggle{
           display: none;
         }
+
+        .quick-buy-wrapper{
+            justify-content: flex-end;
+            margin-top: 15%;
+        }
+
+        /* Brawl overlay & splash */
+
+        .overlay::before{
+           background-image:  url('../images/small-screen-backgrounds/pt-cowboy-sunset-mobile.png')
+        }
+
+        .brawl-logo{
+            display: none;
+        }
+
+        .brawl-splash-logo-container{
+            grid-column: 3 / span 5;
+            grid-row: 3 / span 3;
+        }
+
+
+        /* assets page - buy land 
+         land map only visible on desktop devices*/
+
+        .land-info-wrapper{
+            flex-direction: column;
+
+        }
+
+        .land-info-article{
+            width: 100%;
+        }
+
+        .land-info-article:nth-child(2) {
+            display: none;
+
+        }
+
+        .landsale--container{
+            display: none;
+
+        }
+
+        .pocket-towne-map-header{
+            display: none;
+        }
+
+        .pocket-towne-map-header-mobile{
+            display: flex;
+        }
+
+        .minting-options{
+            grid-template-rows: auto;
+        }
+
+        .option-send-ada{
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+        }
+
+        .buy-nfts-mint{
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        /* ptc section */
+
+
+        .ptc-buttons{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+
+        .ptc-buttons > button{
+            width: 25%;
+        }
+
     }
