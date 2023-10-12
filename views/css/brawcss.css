@@ -670,21 +670,27 @@ div.legend--marker-estate.sold {
     width: 50%;
   }
 
+.bank-of-ptc-header-div{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.bank-of-ptc-header-div > img{
+    display: flex;
+    justify-content: center;
+}
+
 .bank-of-ptc-header{
     justify-content: center;
     display: flex;
     align-items: center;
 } 
 
-.bank-of-ptc-header > aside {
-    margin: 0;
-    padding: 0;
-    width: 5%
-}
 
 
  .pocket-change-logo{
-    width: 100%;
+    width: 10%;
  }
 
 
@@ -760,6 +766,10 @@ div.legend--marker-estate.sold {
     align-items: center;
     text-align: center;
 
+}
+
+.ptcGo{
+ display: none;
 }
 
 
@@ -1165,6 +1175,10 @@ div.legend--marker-estate.sold {
 
         }
 
+        .buy-land-article-header{
+            font-size: 1.5em;
+        }
+
         .pocket-towne-map-header{
             display: none;
         }
@@ -1189,6 +1203,10 @@ div.legend--marker-estate.sold {
 
         /* ptc section */
 
+        .pocket-change-logo {
+            width: 20%;
+        }
+
 
         .ptc-buttons{
             display: flex;
@@ -1200,5 +1218,75 @@ div.legend--marker-estate.sold {
         .ptc-buttons > button{
             width: 25%;
         }
+
+        .ptc-till-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+
+        .cash-container{
+            display: none;
+        }
+
+        .ptcGo{
+            display: flex;
+        }
+
+        .wallet-input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .adaannouncebox-mid-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .ptc-minswap-dex{
+            margin-top: 3%;
+            text-align: center;
+        }
+
+        /* footer media 480 */
+
+        footer{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        
+            padding-top: 3%;
+            border-top: 5px solid black;
+        
+        
+          }
+        
+          footer::before{
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('../images/footerlogos/Footer.jpg');
+            background-size: cover;
+            filter: contrast(40%);
+        
+          }
+    
+          .footer-info{
+            font-size: 0.5em;
+          }
+
+          .footer-info > h2{
+            font-size: 1.8em;
+          }
+    
+          .footer-logos > a > img{
+            width: 50%
+          }
+            
 
     }
