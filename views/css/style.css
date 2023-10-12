@@ -651,7 +651,7 @@ flex-wrap: nowrap;
     overflow: auto; /* Enable scroll if needed */
     backdrop-filter: blur(1px);
     background-color: #f6ea8bab; /* Black w/ opacity */
-    padding-top: 10px;
+    
 
     justify-content: center;
     align-items: center;
@@ -1079,7 +1079,7 @@ flex-wrap: nowrap;
 
         width: 100%;
         margin-top: 15%;
-        margin-bottom: 15%;
+        margin-bottom: 30%;
         padding-top: 5%;
         padding-bottom: 7%;
         display: flex;
@@ -1093,11 +1093,16 @@ flex-wrap: nowrap;
         
     }
 
+    .team-header-div{
+      padding-top: 5%;
+    }
+
     .team-inside-wrapper-first{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         justify-items: center;
+        padding-top: 10%;
     }
 
     .team-inside-wrapper-two{
@@ -1105,6 +1110,7 @@ flex-wrap: nowrap;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
        justify-items: center;
+       padding-bottom: 25%;
 
         
     }
@@ -1147,6 +1153,28 @@ flex-wrap: nowrap;
         grid-column: 1/2;
         grid-row: 3/4;
         
+    }
+
+    /*  mobile 480 Modal   */
+
+    .modal-in-view{
+      width: 85%;
+      border: none;
+      height: auto;
+      top: 30%;
+
+    }
+    
+    .modal-content{
+      padding: 0;
+      margin-top: 0;
+
+    }
+    
+
+    .modal-content-in-view{
+      width: 100%;
+      padding: 15% 4%; 
     }
 
 
