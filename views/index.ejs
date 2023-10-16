@@ -358,7 +358,7 @@
     scrollcontainer.addEventListener('wheel', (e) => {
         e.preventDefault();
         scrollcontainer.scrollLeft += e.deltaY
-        scrollcontainer.style.scrollBehavior = 'auto';
+        scrollcontainer.style.scrollBehavior = 'smooth';
     })
 
     let backBtn = document.querySelector('.backBtn');
@@ -367,7 +367,7 @@
     nextBtn.addEventListener('click', () => {
 
     
-        scrollcontainer.scrollBehavior = 'smooth';
+        scrollcontainer.style.scrollBehavior = 'smooth';
         if(window.innerWidth > 480){
             scrollcontainer.scrollLeft += 600;
         } else {
