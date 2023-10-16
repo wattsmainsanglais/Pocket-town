@@ -358,7 +358,7 @@
     scrollcontainer.addEventListener('wheel', (e) => {
         e.preventDefault();
         scrollcontainer.scrollLeft += e.deltaY
-        scrollcontainer.style.scrollBehavior = 'smooth';
+        scrollcontainer.style.scrollBehavior = 'auto';
     })
 
     let backBtn = document.querySelector('.backBtn');
