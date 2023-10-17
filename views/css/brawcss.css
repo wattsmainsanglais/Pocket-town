@@ -250,6 +250,10 @@ flex-wrap: nowrap;
     padding: 3%;
 }
 
+.discord{
+    width: 25px;
+}
+
 /* assets page css */
 
 
@@ -506,6 +510,16 @@ div.legend--marker-estate.sold {
 	border: 1px solid rgba(0, 0, 0, 0.5) !important;
 }
 
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center > input {
+    height: 20px;
+}
+
 .map{
     display: flex;
     flex-direction: column;
@@ -516,6 +530,11 @@ div.legend--marker-estate.sold {
     border: 2px solid #bf9f70;
     padding-bottom: 10%;
     
+}
+
+.pocket-towne-map-header{
+    display: flex;
+    justify-content: center;
 }
 
 .pocket-towne-map-header-mobile{
