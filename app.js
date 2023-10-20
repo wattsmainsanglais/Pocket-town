@@ -27,6 +27,10 @@ app.get('/assets', (req, res) => {
     res.render('../views/assets')
 });
 
+app.get('/paper', (req , res) => {
+    res.render('../views/paper')
+});
+
 
 
 
