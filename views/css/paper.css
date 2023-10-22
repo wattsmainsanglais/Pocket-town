@@ -1,0 +1,390 @@
+
+@font-face {
+    font-family: 'Hard Western';
+    src: URL('./fonts/Hard\ Western.ttf') format('truetype');
+  }
+
+body{
+font-family: 'Hard Western', 'Courier New', Courier, monospace;
+letter-spacing: .15rem;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+
+
+}
+
+.navbar{
+    width: 100%;
+   
+    backdrop-filter: blur(10px);
+   
+    
+    color: black;
+    border-bottom: 3px solid #887a6e;
+    box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -webkit-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -moz-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    
+    
+}
+
+.nav-container{
+    display: none;
+}
+
+
+
+
+.desktop-list {
+    
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: none;
+    filter: none;
+
+
+}
+
+.desktop-list > li, .d-ul-a {
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 1% 2%;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: text-shadow .5s, color .5s;
+}
+
+.d-ul-a:hover {
+    cursor: pointer;
+    color: #887a6e;
+    text-shadow: 0 0 5px #f6ea8b,
+                0 0 25px  #f6ea8b,
+                0 0 50px #f6ea8b,
+                0 0 100px #f6ea8b;
+  }
+
+
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;     
+    
+    
+     
+    position: relative;    
+
+}
+
+.overlay::before{
+    content: "";
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;/* parrallax */
+    background-image: url('../images/pt-cowboy-sunset.png');
+    
+    filter:grayscale(10%);
+    
+    }  
+
+.overlay-inside{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}  
+
+.paper-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4em ;
+    width: 80%;
+    padding-bottom: 5%;
+
+}
+
+.paper-content > article{
+    width: 100%;
+    color: rgb(255, 250, 240);
+    display: flex;
+    flex-direction: column;
+   
+   
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border: 3px solid #887a6e;
+    box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -webkit-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+    -moz-box-shadow: -5px -4px 29px 4px rgba(136,122,110,0.82);
+
+    height: 100%;
+    width: 100%;
+    
+    
+    /*background-image: url('../images/cactus-frontier.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    background-color: #5c4e4798;
+    background-blend-mode: color-burn;
+    
+    
+    
+    
+    min-height: 600px;/* parrallax */
+}
+
+
+.paper-content-text-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3% 0 3%;
+    padding: 3% 3%;
+    background-color:#af874a9f;
+    border-radius: 1em;
+    border: 2px solid #bf9f70;
+    
+
+}
+
+.paper-content-text-div h2{
+    padding: 0% 3% 3% 3%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.mayorIntro{
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.mayorImg{
+  width: 15%;
+}
+
+.speechBubble{
+  width: 45%;
+  margin-top: 3%;
+  background-color: burlywood;
+  clip-path: polygon(32% 0, 100% 0%, 100% 83%, 31% 83%, 31% 30%, 0 13%, 32% 17%);
+}
+
+.speechBubble > p{
+ 
+  padding: 5% 5% 5% 40%;
+}
+
+.speechBubble2 {
+
+  width: 45%;
+  margin-top: 3%;
+  background-color: burlywood;
+  clip-path: polygon(0% 0%, 69% 0, 69% 26%, 100% 13%, 69% 39%, 69% 82%, 0 82%);
+
+}
+
+.speechBubble2 > p {
+  padding: 5% 40% 5% 5%;
+
+}
+
+.speechQuestionArticle{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.speechQuestion{
+  
+  width: 15%;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  font-size: .8em;
+  padding: 2% 2% 2% 5%;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+}
+
+.speechQuestion2{
+
+  width: 15%;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  font-size: .8em;
+  padding: 2% 5% 2% 2%;
+  background-color: burlywood;
+}
+
+.doonDongLogo{
+  width: 25%;
+}
+
+.token-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.token-details > p, .token-details > h3, .token-details > a {
+  padding: 1% 0;
+}
+
+.chart-display {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+@media only screen and (max-width: 480px) {
+    body{
+        font-size: 0.7em;
+      }
+    
+        .navbar{
+           
+        
+            position: absolute;
+            top: 0;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 95%;
+            margin-top: 10%;
+            margin-left: 0;
+            opacity: 1;
+            background-color: transparent;
+            color: black;
+            z-index: 2;
+            box-shadow: none;
+            backdrop-filter: none;
+            border: none;
+        
+          }
+        
+          .nav-container {
+            width: 100%;
+            height: 60px;
+            grid-column: unset;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          
+          .nav-container .checkbox {
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            top: 20px;
+            left: 20px;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+          }
+          
+          .nav-container .hamburger-lines {
+            display: block;
+            height: 26px;
+            width: 32px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          
+          .nav-container .hamburger-lines .line {
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #0e2431;
+          }
+          
+          .nav-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+          }
+          
+          .nav-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+          }
+          
+          .nav-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+          }
+    
+          .desktop-list{
+            display: none;
+          }
+          
+          .hamburger-list {
+            padding-top: 20%;
+            box-shadow: inset 0 0 2000px #f6ea8b;
+            height: 60%;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+        
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+            background-color: #f6ea8b;
+          }
+          
+          .h-ul-a {
+            padding-bottom: 2%;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background-color: #f6ea8b;
+          }
+        
+          .nav-container input[type="checkbox"]:checked ~ .hamburger-list {
+            transform: translateX(0);
+          }
+          
+          .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+            transform: rotate(45deg);
+          }
+          
+          .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+            transform: scaleY(0);
+          }
+          
+          .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-45deg);
+          }
+        
+          .nav-container input[type="checkbox"]:checked ~ .language-toggle{
+            display: none;
+          }
+}
+
+
