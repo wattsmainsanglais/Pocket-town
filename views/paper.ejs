@@ -176,9 +176,21 @@
                     <article class="token-chart">
 
                         <div class="chart-display">
-                            <canvas id="pt_chart" style="display: block; box-sizing: border-box; height: 409px; width: 409px;" width="409" height="409"></canvas>
+                            <canvas id="pt_chart" style="display: block; box-sizing: border-box; height: 350px; width: 350px;" width="350" height="350"></canvas>
                             <script>
-                               
+                                Chart.defaults.font.size = 16;
+                                Chart.defaults.color = "black";
+                                var xValues = ["Initial DEX and website sales", "In-Game Economy", "Secondary DEX/CEX and website sales", "SPO partner rewards / marketing ", "reserved for the founders", "Cardano ecosystem airdrops"];
+                                var yValues = [25, 25, 20, 15, 10, 5];
+                                var barColors = [
+                                "#b91d47",
+                                "#00aba9",
+                                "#2b5797",
+                                "#e8c3b9",
+                                "#1e7145",
+                                "#9817f3"
+                                ];
+                            
                                 var c2 = new Chart("pt_chart", {
                                 type: "pie",
                                 data: {
@@ -206,26 +218,13 @@
                                     }
                                 }
                             });
-
-                            Chart.defaults.font.size = 16;
-                                Chart.defaults.color = "black";
-                                var xValues = ["Initial DEX and website sales", "In-Game Economy", "Secondary DEX/CEX and website sales", "SPO partner rewards / marketing ", "reserved for the founders", "Cardano ecosystem airdrops"];
-                                var yValues = [25, 25, 20, 15, 10, 5];
-                                var barColors = [
-                                "#b91d47",
-                                "#00aba9",
-                                "#2b5797",
-                                "#e8c3b9",
-                                "#1e7145",
-                                "#9817f3"
-                                ];
                             </script>
                             <div class="legend">
                                 <div><span class="s1">25<span class="copyright">%</span></span> Initial DEX and website sales <span class="copyright">(</span>Funding round 1<span class="copyright">)</span></div>
                                 <div><span class="s2">25<span class="copyright">%</span></span> In-Game Economy</div>
                                 <div><span class="s3">20<span class="copyright">%</span></span> Secondary DEX/CEX and website sales <span class="copyright">(</span>Funding round 2<span class="copyright">)</span></div>
                                 <div><span class="s4">15<span class="copyright">%</span></span> SPO partner rewards <span class="copyright">/</span> Marketing</div>
-                                <div><span class="s5">10<span class="copyright">%</span></span> reserved for the founders <span class="copyright">(</span>Cannot sell until post game launch<span class="copyright">)</span></div>
+                                <div><span class="s5">10<span class="copyright">%</span></span> Founders <span class="copyright">(</span>Cannot sell until post game launch<span class="copyright">)</span></div>
                                 <div><span class="s6">5<span class="copyright">%</span></span> Cardano ecosystem airdrops</div>
                             </div>
                         </div>
