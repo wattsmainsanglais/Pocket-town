@@ -1202,3 +1202,31 @@ div.legend--marker-estate.sold {
 
 
     }
+
+    @media only screen and (min-width: 800px) and (max-width: 1280px) {
+
+        body{
+          font-size: 0.9em;
+        }
+
+        .brawl-splash{
+            margin-bottom: 30%;
+        }
+        
+        .brawl-splash-logo-container{
+            height: fit-content;
+            
+        }
+      
+      
+      }
+      
+      
+      @media only screen and (min-width: 1000px) and (max-width: 1280px) {
+      
+        body{
+          font-size: 1em;
+        }
+      
+      
+      }
