@@ -551,15 +551,23 @@ flex-wrap: nowrap;
 }
 
 
-@media only screen and (min-width: 800px) and (max-width: 1280px) {
+@media only screen and (min-width: 760px) and (max-width: 1280px) {
   body{
       font-size: 0.9em;
   }
+
+  .speechBubble2 {
+    clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 50%, 0 50%);
+    height: auto;
+    width: 60%;
+}
 
   #pt_chart{
     width: 250px;
     height: 250px;
   }
+
+
 
 } 
 
