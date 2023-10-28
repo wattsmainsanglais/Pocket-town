@@ -198,11 +198,11 @@ flex-wrap: nowrap;
 }
 
 .speechBubble2 {
-
-  width: 45%;
+  height: auto;
+  width: 30%;
   margin-top: 3%;
   background-color: burlywood;
-  clip-path: polygon(0% 0%, 69% 0, 69% 26%, 100% 13%, 69% 39%, 69% 82%, 0 82%);
+  clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 50%, 0 50%);
 
 }
 
@@ -472,7 +472,14 @@ flex-wrap: nowrap;
             margin-bottom: 5%;
           }
 
+          .speechBubble2{
+            clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 70%, 0 70%);
+            height:auto;
+            width: 60%;
+          }
+
           .speechBubble > p{
+            
             padding: 3% 3% 3% 35%;
           }
 
