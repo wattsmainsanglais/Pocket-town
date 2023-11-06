@@ -394,16 +394,28 @@ if(window.innerWidth > 480){
     
 const primaryHeader = document.querySelector('.navbar')
 const scrollWatcher = document.createElement('div');
+const teamSectionDiv = document.querySelector('.team')
+const scrollWatcher2 = document.createElement('div');
+const sections = [scrollWatcher, scrollWatcher2]
 
 scrollWatcher.setAttribute('data-scroll-watcher', '')
 primaryHeader.before(scrollWatcher);
+
+
 
 const navObserver = new IntersectionObserver( (entries)=> {
     console.log(entries)
     primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
 }, {rootMargin: "63% 0% 0% 0%"});
 
-navObserver.observe(scrollWatcher);
+
+sections.forEach(section => {
+    navObserver.observe(section);
+})
+
+
+
+
 
 /* Team section*/
     
