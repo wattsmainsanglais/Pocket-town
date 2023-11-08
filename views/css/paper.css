@@ -473,9 +473,9 @@ flex-wrap: nowrap;
           }
 
           .speechBubble2{
-            clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 70%, 0 70%);
+            clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 45%, 0 45%);
             height:auto;
-            width: 60%;
+            width: 30%;
           }
 
           .speechBubble > p{
@@ -551,16 +551,11 @@ flex-wrap: nowrap;
 }
 
 
-@media only screen and (min-width: 760px) and (max-width: 1280px) {
+@media only screen and (min-width: 760px) and (max-width: 1000px) {
   body{
       font-size: 0.9em;
   }
 
-  .speechBubble2 {
-    clip-path: polygon(0% 0%, 69% 0, 69% 16%, 100% 13%, 69% 31%, 69% 50%, 0 50%);
-    height: auto;
-    width: 60%;
-}
 
   #pt_chart{
     width: 250px;
@@ -574,8 +569,18 @@ flex-wrap: nowrap;
 
 @media only screen and (min-width: 1000px) and (max-width: 1280px) {
   body{
-      font-size: 1m;
+      font-size: 1em;
   }
+
+  .speechBubble{
+    width: 60%;
+    height: fit-content;
+    clip-path: polygon(32% 0, 100% 0%, 100% 100%, 31% 100%, 31% 30%, 0 13%, 32% 17%);
+    margin-bottom: 5%;
+  }
+
+  
+  
 
   #pt_chart{
     width: 325px;
@@ -583,5 +588,24 @@ flex-wrap: nowrap;
   }
 
 } 
+
+@media only screen and (min-width: 1280px) and (max-width: 2000px) {
+
+  body{
+    font-size: 1.1em;
+}  
+
+  .speechBubble{
+    width: 50%;
+    height: fit-content;
+    clip-path: polygon(32% 0, 100% 0%, 100% 100%, 31% 100%, 31% 30%, 0 13%, 32% 17%);
+    margin-bottom: 5%;
+  }
+
+
+
+} 
+
+
 
 
