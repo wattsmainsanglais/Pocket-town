@@ -599,6 +599,13 @@ div.legend--marker-estate.sold {
 	z-index: 500 !important;
 }
 
+.landgrid--cell-estate {
+	border: 1px solid transparent;
+	width: 8px;
+	height: 8px;
+	z-index: 500 !important;
+}
+
 .landgrid--cell-single.desert {
 	background-color: rgba(242,242,195,1.0);
 }
