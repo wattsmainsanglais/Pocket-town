@@ -369,10 +369,18 @@
 
     
         scrollcontainer.style.scrollBehavior = 'smooth';
-        if(window.innerWidth > 480){
-            scrollcontainer.scrollLeft += 600;
-        } else {
+        if(window.innerWidth < 480){
             scrollcontainer.scrollLeft += 200;
+        } else if(window.innerWidth < 901) {
+            scrollcontainer.scrollLeft += 485;
+        } else if(window.innerWidth < 1281){
+            scrollcontainer.scrollLeft += 740; 
+        } 
+        else if(window.innerWidth < 1381){
+            scrollcontainer.scrollLeft += 540;
+        }
+        else {
+            scrollcontainer.scrollLeft += 790;
         }
         
 })
@@ -380,12 +388,20 @@
 backBtn.addEventListener('click', () => {
 
     
-scrollcontainer.scrollBehavior = 'smooth';
-if(window.innerWidth > 480){
-    scrollcontainer.scrollLeft -= 600;
-} else {
-    scrollcontainer.scrollLeft -= 200;
-}
+    scrollcontainer.scrollBehavior = 'smooth';
+        if(window.innerWidth < 480){
+            scrollcontainer.scrollLef -= 200;
+        } else if(window.innerWidth < 901) {
+            scrollcontainer.scrollLeft -= 485;
+        } else if(window.innerWidth < 1281){
+            scrollcontainer.scrollLeft -= 740; 
+        } 
+        else if(window.innerWidth < 1381){
+            scrollcontainer.scrollLeft -= 540;
+        }
+        else {
+            scrollcontainer.scrollLeft -= 790;
+        }
 
 })
 
