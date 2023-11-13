@@ -374,15 +374,18 @@
 
     
         scrollcontainer.style.scrollBehavior = 'smooth';
-        if(window.innerWidth < 480){
-            scrollcontainer.scrollLeft += 200;
-        } else if(window.innerWidth < 901) {
+        if(window.innerWidth < 400){
+            scrollcontainer.scrollLeft += 240;
+        } else if(window.innerWidth < 480){
+            scrollcontainer.scrollLeft += 255;
+        }
+        else if(window.innerWidth < 901) {
             scrollcontainer.scrollLeft += 485;
         } else if(window.innerWidth < 1281){
-            scrollcontainer.scrollLeft += 740; 
+            scrollcontainer.scrollLeft += 744; 
         } 
         else if(window.innerWidth < 1381){
-            scrollcontainer.scrollLeft += 540;
+            scrollcontainer.scrollLeft += 545;
         }
         else {
             scrollcontainer.scrollLeft += 790;
@@ -394,15 +397,18 @@ backBtn.addEventListener('click', () => {
 
     
     scrollcontainer.scrollBehavior = 'smooth';
-        if(window.innerWidth < 480){
-            scrollcontainer.scrollLeft -= 200;
-        } else if(window.innerWidth < 901) {
+        if(window.innerWidth < 400){
+            scrollcontainer.scrollLeft -= 240;
+        } else if(window.innerWidth < 480){
+            scrollcontainer.scrollLeft -= 255;
+        }
+        else if(window.innerWidth < 901) {
             scrollcontainer.scrollLeft -= 485;
         } else if(window.innerWidth < 1281){
-            scrollcontainer.scrollLeft -= 740; 
+            scrollcontainer.scrollLeft -= 744; 
         } 
         else if(window.innerWidth < 1381){
-            scrollcontainer.scrollLeft -= 540;
+            scrollcontainer.scrollLeft -= 545;
         }
         else {
             scrollcontainer.scrollLeft -= 790;
