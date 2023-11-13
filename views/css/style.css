@@ -288,6 +288,7 @@ flex-wrap: nowrap;
     }  
 
 .overlay-inside{
+    width: 100%;
     position: relative;
 
 }    
