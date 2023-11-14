@@ -360,6 +360,7 @@
 <script>
       // road map scroller
       let scrollcontainer = document.querySelector(".scroller-container");
+      let scrollElement = document.querySelector(".scroll-element")
     
     scrollcontainer.addEventListener('wheel', (e) => {
         e.preventDefault();
@@ -370,19 +371,30 @@
     let backBtn = document.querySelector('.backBtn');
     let nextBtn = document.querySelector('.nextBtn');
 
+    let scrollElementWidth = scrollElement.offsetWidth
+    
+    let screenSize = window.innerWidth
+
+    let scrollAmountMobile = scrollElementWidth * .933
+    let scrollAmountTablet = scrollElementWidth * .985
+
+    console.log(scrollElementWidth)
+    
+    console.log(scrollAmountMobile)
+
     nextBtn.addEventListener('click', () => {
 
     
         scrollcontainer.style.scrollBehavior = 'smooth';
-        if(window.innerWidth < 400){
-            scrollcontainer.scrollLeft += 240;
-        } else if(window.innerWidth < 480){
-            scrollcontainer.scrollLeft += 255;
+        
+      
+        if(window.innerWidth < 481){
+            scrollcontainer.scrollLeft += scrollAmountMobile;
         }
         else if(window.innerWidth < 901) {
-            scrollcontainer.scrollLeft += 485;
+            scrollcontainer.scrollLeft += scrollAmountTablet;
         } else if(window.innerWidth < 1281){
-            scrollcontainer.scrollLeft += 744; 
+            scrollcontainer.scrollLeft += scrollAmountTablet; 
         } 
         else if(window.innerWidth < 1381){
             scrollcontainer.scrollLeft += 545;
@@ -397,15 +409,14 @@ backBtn.addEventListener('click', () => {
 
     
     scrollcontainer.scrollBehavior = 'smooth';
-        if(window.innerWidth < 400){
-            scrollcontainer.scrollLeft -= 240;
-        } else if(window.innerWidth < 480){
-            scrollcontainer.scrollLeft -= 255;
+    
+        if(window.innerWidth < 481){
+            scrollcontainer.scrollLeft -= scrollAmountMobile
         }
         else if(window.innerWidth < 901) {
-            scrollcontainer.scrollLeft -= 485;
+            scrollcontainer.scrollLeft -= scrollAmountTablet;
         } else if(window.innerWidth < 1281){
-            scrollcontainer.scrollLeft -= 744; 
+            scrollcontainer.scrollLeft -= scrollAmountTablet; 
         } 
         else if(window.innerWidth < 1381){
             scrollcontainer.scrollLeft -= 545;
