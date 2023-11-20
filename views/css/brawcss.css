@@ -286,7 +286,7 @@ flex-wrap: nowrap;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1000px;/* parrallax */
-    background-image: url('../images/train.png');
+    background-image: url('../images/train.jpg');
     
     filter:saturate(110%);
     
