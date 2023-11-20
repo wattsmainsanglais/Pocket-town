@@ -164,14 +164,14 @@ flex-wrap: nowrap;
 }
 
 .contact-icon-wrapper-contact{
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 1;
     grid-row: 1;
     display: flex;
-    justify-content: flex-end   ;
+    justify-content: flex-start   ;
     
     flex-direction: column;
     align-items: center;
-    align-content: flex-end;
+    align-content: flex-start;
     flex-wrap: wrap;
     
 }
@@ -213,6 +213,7 @@ flex-wrap: nowrap;
   grid-row: 1 / span 1;
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 .buy-icon-wrapper-one > div{
@@ -238,26 +239,20 @@ flex-wrap: nowrap;
     padding-left: 1.5%;
 }
 
-.buy-icon-wrapper img:hover{
+.rotate3D:hover{
 
   animation: iconrotate .8s linear;
   animation-iteration-count: 1;
   cursor: pointer;
 }
 
-.buy-icon-wrapper-one > div > a > img:hover:nth-child(1){
+.rotate:hover{
   animation: icondance .4s linear;
     animation-iteration-count: 1;
     cursor: pointer;
 }
 
 
-.contact-icon-wrapper-contact img:hover{
-    
-    animation: icondance .4s linear;
-    animation-iteration-count: 1;
-    cursor: pointer;
-  }
 
 .splash-blurb{
     position: relative;
@@ -1042,6 +1037,17 @@ flex-wrap: nowrap;
         margin-right: 10%;
     
     }
+
+    .contact-icon-wrapper-contact{
+      grid-column: 3 / span 1;
+      grid-row: 1;
+      
+      justify-content: flex-end   ;
+      
+      align-content: flex-end;
+     
+      
+  }
 
     .buy-icon-wrapper{
       display: none;

@@ -10181,11 +10181,11 @@ document.getElementById("copy-wallet").addEventListener('click', fadeOutEffect);
         })
 
         function doHandleDown() {
-            document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_up.png'
-            var audio = new Audio('./cash-register.mp3');
+            document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_down.png'
+            var audio = new Audio('./images/cash-register/cash-register.mp3');
             audio.play().then(() => {
                 setTimeout(() => {
-                    document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_d.png'
+                    document.getElementById('cashRegisterHandle').src = '/images/cash-register/CashRegister_handle_up.png'
                 }, 200)
                 
             });
