@@ -152,7 +152,7 @@ flex-wrap: nowrap;
     grid-column: 3 / 4;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     justify-content: flex-end;
     
     flex-direction: column;
@@ -177,7 +177,7 @@ flex-wrap: nowrap;
 }
 
 .buy-icon-wrapper{
-    grid-column: 1 / span 1;
+    grid-column: 2 / span 1;
     grid-row: 1;
     display: grid;
     grid-template-columns: 1fr;
