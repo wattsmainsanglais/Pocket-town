@@ -111,6 +111,7 @@ flex-wrap: nowrap;
     font-size: 1.1em;
     font-weight: 700;
     transition: text-shadow .5s, color .5s;
+    color: #050005;
 }
 
 .desktop-list > li:hover, .d-ul-a:hover {
@@ -207,7 +208,7 @@ flex-wrap: nowrap;
   align-items: flex-end;
 }
 
-.buy-icon-wrapper-one > h2{
+.buy-icon-h2{
   font-size: 1.3em;
   grid-column: 1;
   grid-row: 1 / span 1;
