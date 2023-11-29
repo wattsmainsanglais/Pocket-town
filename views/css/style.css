@@ -232,6 +232,11 @@ flex-wrap: nowrap;
   justify-content: center;
 }
 
+.buy-icon-wrapper-two > a {
+  display: flex;
+  justify-content: center;
+}
+
 
 .contact-icon-wrapper > div > a > img{
     
@@ -1327,12 +1332,22 @@ body{
 }
 
 .splash-logo-wrapper-img-wrapper img{
-    width: 600px;
+    width: 525px;
 }
 
-.contact-icon-wrapper a img, .contact-icon-wrapper-contact a img {
-    width: 80%;
+.desert{
+  width: 80%;
 }
+
+.doll{
+  width: 75%;
+}
+
+.pocket{
+  width: 80%;
+}
+
+
 
 .contact-icon-wrapper-contact a img {
   width: 100%;
