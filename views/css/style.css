@@ -253,7 +253,17 @@ flex-wrap: nowrap;
     cursor: pointer;
 }
 
+.desert{
+  width: 100px;
+}
 
+.doll{
+  width: 72px;
+}
+
+.pocket{
+  width: 72px
+}
 
 .splash-blurb{
     position: relative;
@@ -1320,9 +1330,15 @@ body{
     width: 600px;
 }
 
-.contact-icon-wrapper a img {
-    width: 130%;
+.contact-icon-wrapper a img, .contact-icon-wrapper-contact a img {
+    width: 80%;
 }
+
+.contact-icon-wrapper-contact a img {
+  width: 100%;
+}
+
+
 
 }
 
