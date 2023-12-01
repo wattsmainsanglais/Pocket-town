@@ -421,7 +421,7 @@ flex-wrap: nowrap;
 
 .faq{
     
-    width: 75%;
+    width: 80%;
     height: 600px;
     margin: 10%;
     display: flex;
@@ -1317,11 +1317,34 @@ flex-wrap: nowrap;
 
 }
 
+@media only screen and (min-width: 1380px) and (max-width: 1680px) {
+  body{
+    font-size: 1.15em;
+  }
+  
+  .navbar{
+    color: #050005;
+  }
+  
+  .splash-logo-wrapper-img-wrapper img{
+      width: 450px;
+  }
+  
+  .desert{
+    width: 75%;
+  }
+  
+  .doll{
+    width: 70%;
+  }
+  
+  .pocket{
+    width: 75%;
+  }
 
+}
 
-
-
-@media only screen and (min-width: 1380px) and (max-width: 2000px) {
+@media only screen and (min-width: 1680px) and (max-width: 2000px) {
 
 body{
   font-size: 1.2em;
@@ -1348,13 +1371,6 @@ body{
 }
 
 
-
-.contact-icon-wrapper-contact a img {
-  width: 100%;
-}
-
-
-
 }
 
 
@@ -1372,15 +1388,3 @@ body{
 }
 
 
-@media only screen and (min-width: 1000px) and (max-width: 1280px) {
-
-  body{
-    font-size: 1em;
-  }
-
-  .splash-logo-wrapper-img-wrapper > img{
-    width: 550px;
- }
-
-
-}
