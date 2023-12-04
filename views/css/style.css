@@ -147,6 +147,10 @@ flex-wrap: nowrap;
     grid-column: 2 / 3;
 }
 
+.splash-logo-wrapper-img-wrapper > img{
+  width: 75%;
+}
+
 
 
 .contact-icon-wrapper{
@@ -175,6 +179,15 @@ flex-wrap: nowrap;
     align-content: flex-start;
     flex-wrap: wrap;
     
+}
+
+.discord{
+  width: 56px;
+}
+
+.medium{
+  width: 66px
+
 }
 
 .buy-icon-wrapper{
@@ -1079,7 +1092,7 @@ flex-wrap: nowrap;
 
     .overlay::before{
        
-        min-height: 600px; /* parrallax */
+        min-height: 600px; /* parallax */
         background-image: url('../images/small-screen-backgrounds/pt-cowboy-cave-mobile.png');
        
 
@@ -1344,10 +1357,10 @@ flex-wrap: nowrap;
 
 }*/
 
-@media only screen and (min-width: 1680px) and (max-width: 2000px) {
+@media only screen and (min-width: 1680px){
 
 body{
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .navbar{
@@ -1355,19 +1368,19 @@ body{
 }
 
 .splash-logo-wrapper-img-wrapper img{
-    width: 500px;
+    width: 80%;
 }
 
 .desert{
-  width: 80%;
+  width: 6em;
 }
 
 .doll{
-  width: 75%;
+  width: 6em;
 }
 
 .pocket{
-  width: 80%;
+  width: 6em;
 }
 
 
@@ -1377,14 +1390,10 @@ body{
 @media only screen and (min-width: 800px) and (max-width: 1280px) {
 
   body{
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
-  .splash-logo-wrapper-img-wrapper > img{
-    width: 400px;
- }
-
-
+ 
 }
 
 
